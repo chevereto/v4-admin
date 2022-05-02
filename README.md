@@ -22,12 +22,6 @@ Not an admin? You can check the [Chevereto V4 user's manual](https://v4-user.che
 * [Community](https://chevereto.com/community/)
 * [Releases](https://releases.chevereto.com/)
 
-## 🎛 Dashboard
-
-The Chevereto Dashboard is where you control your Chevereto instance. It is located at `/dashboard`.
-
-`🚧 missing pic/video`
-
 ## Admin accounts
 
 The first account created on install is the admin account, which can can be modified and additional administrators can be added.
