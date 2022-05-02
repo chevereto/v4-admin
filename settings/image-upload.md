@@ -8,7 +8,7 @@ This control the settings related to image uploading.
 
 Determines which image formats can be uploaded.
 
-::: tip Formats supported
+::: tip ✅ Formats supported
 JPG PNG BMP GIF WEBP
 :::
 
@@ -55,8 +55,8 @@ Determines the number of parallel threads used by the uploader. This setting sho
 
 Toggles the HTTP redirection on single image upload. When enabled, users will be redirected to the image viewer.
 
-::: warning
-This should be disabled if upload moderation is enabled. This is because the viewer URL will return `HTTP 403` until the image gets approved.
+::: warning Moderate uploads
+This setting should be disabled if [moderate upload](#moderate-uploads) is enabled. This is because the viewer URL will return `HTTP 403` until the image **gets approved**.
 :::
 
 ## Enable duplicate uploads
@@ -108,9 +108,7 @@ How uploads will get organized in the file system.
 | Datefolders | Uses a nested folder structure `YYYY/MM/DD` |
 | Direct      | No folder structure                         |
 
-::: tip
-This setting only affects future uploads. Previous uploads won't be affected.
-:::
+💡 Altering this setting only affects future uploads. Previous uploads won't be affected.
 
 ## File naming method
 
@@ -145,10 +143,6 @@ The medium image size. Images will be resized based on the [medium image fixed d
 ## Watermarks
 
 Toggles image watermarking, which are images that are merged in front of the images. Useful for any branding need.
-
-::: tip
-Watermark settings below applies only if `Watermarks` is `Enabled`.
-:::
 
 ## Watermark user toggles
 

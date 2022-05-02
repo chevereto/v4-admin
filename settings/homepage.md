@@ -87,9 +87,7 @@ Determines the HTML for the homepage call to action button.
 
 ## User IDs
 
-::: tip
-This setting applies only when `Style` is set to `Split landing + images`.
-:::
+💡 This setting applies only when `Style` is set to `Split landing + images`.
 
 Determines the user ids which will source the homepage images. Leave it blank to display "trending" images, which will work as `/explore/trending`.
 

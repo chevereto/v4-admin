@@ -4,10 +4,6 @@
 
 Flood protection is enabled by default and is highly encouraged to enable it in your website.
 
-::: tip
-All settings here applies only if `Flood protection` is enabled.
-:::
-
 ## Notify to email
 
 Toggles sending a notification when flood is detected.

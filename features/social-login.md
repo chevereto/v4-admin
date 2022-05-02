@@ -1,4 +1,6 @@
-# Social login
+# 🔐 Social login
+
+Social login enables users to sign up to your Chevereto instance by connecting their third-party social accounts for login.
 
 ## Google login
 
@@ -26,10 +28,6 @@ To enable VK you will need to create a [VK app](https://vk.com/dev).
 
 ## Twitter login
 
-::: danger Not secure
-This service provider is known for its lack of security and violation of privacy policies. We don't recommend using this feature.
-:::
-
 To enable Twitter login you will need to create a [Twitter app](https://apps.twitter.com/).
 
 * Go to `apps.twitter.com` and click on "Create New App".
@@ -41,10 +39,6 @@ To enable Twitter login you will need to create a [Twitter app](https://apps.twi
     * Read and Write (selected)
 
 ## Facebook login
-
-::: danger Not secure
-This service provider is known for its lack of security and violation of privacy policies. We don't recommend using this feature.
-:::
 
 To enable Facebook login you will need to create a [Facebook app](https://developers.facebook.com/).
 

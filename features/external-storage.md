@@ -1,38 +1,42 @@
-# External storage
+# 🪣 External storage
 
 External storage allows to use external servers for storing user uploads, which helps to leverage your server load and deliver a more reliable website. If you use multiple external storage servers, it will help to distribute the traffic of these assets.
 
-External storage works by adding a external storage server where file uploads will be stored. This external storage server expose those files using HTTP, enabling users and visitors of your Chevereto installation to access these images directly.
+::: tip 💡 Asset storage
+Check the documentation on [Asset variables](https://v4-docs.chevereto.com/application/configuration/environment.html#assets-variables) if you want to control where to store the website assets (backgrounds, avatars, etc.)
+:::
+
+## How it works?
+
+External storage works by adding external storage server(s) where file uploads will be stored. These external storage servers expose those files using HTTP, enabling users and visitors of your Chevereto installation to access these images directly.
 
 ## Storage URL
 
-::: tip Storage server provided
-The storage server must provide the URL for public-read file access. Check the documentation of your service provider.
-:::
+💡 The storage server must provide the URL for public-read file access. Check the documentation of your service provider.
 
 Chevereto maps external storage uploads to the corresponding external storage server using the given Storage URL as a base URL to locate that file in the external storage.
 
 Using Amazon S3 with direct storage:
 
-| Property     | Value                                          |
-| ------------ | ---------------------------------------------- |
-| Bucket       | `my-bucket`                                    |
-| Storage URL  | `https://s3.amazonaws.com/my-bucket/`          |
-| Stored image | `my-bucket/image.jpg`                          |
-| Mapped URL   | `https://s3.amazonaws.com/my-bucket/image.jpg` |
+| Property     | Value                                        |
+| ------------ | -------------------------------------------- |
+| Bucket       | my-bucket                                    |
+| Storage URL  | https://s3.amazonaws.com/my-bucket/          |
+| Stored image | my-bucket/image.jpg                          |
+| Mapped URL   | https://s3.amazonaws.com/my-bucket/image.jpg |
 
-::: tip CNAME
+::: warning CNAME
 Is recommended that you use URLs that match your domain so try to take advantage of using a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
 :::
 
 Amazon S3 with folder-based storage and custom CNAME (`img.domain.com`):
 
-| Property     | Value                                                   |
-| ------------ | ------------------------------------------------------- |
-| Bucket       | `my-bucket`                                             |
-| Storage URL  | `https://img.domain.com/my-bucket/`                     |
-| Stored image | `/my-bucket/2020/10/06/image.jpg`                       |
-| Mapped URL   | `https://img.domain.com/my-bucket/2020/10/06/image.jpg` |
+| Property     | Value                                                 |
+| ------------ | ----------------------------------------------------- |
+| Bucket       | my-bucket                                             |
+| Storage URL  | https://img.domain.com/my-bucket/                     |
+| Stored image | /my-bucket/2020/10/06/image.jpg                       |
+| Mapped URL   | https://img.domain.com/my-bucket/2020/10/06/image.jpg |
 
 ## Storage URL with CDN
 
@@ -56,11 +60,13 @@ Adding a CNAME record for the above URL will allow you to end up with a Storage 
 https://s3-cdn.domain.com/
 ```
 
-## Alibaba Cloud OSS
+## Providers
+
+### Alibaba Cloud OSS
 
 The Alibaba Cloud OSS API allows to upload images to [Alibaba Cloud (Aliyun) Object Storage System (OSS)](https://www.alibabacloud.com/product/oss/).
 
-## Amazon S3
+### Amazon S3
 
 The Amazon S3 API allows to upload images to an [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3) bucket. You will need an [Amazon Web Services](https://aws.amazon.com/) (AWS) account for this.
 
@@ -77,7 +83,7 @@ The Amazon S3 API allows to upload images to an [Amazon S3](https://en.wikipedia
 
 If you want to use a custom domain follow the [CNAME](https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs) documentation. Otherwise just make sure that the [Storage URL](#storage-url) ends with `/<your_bucket_name>/`
 
-## Backblaze B2
+### Backblaze B2
 
 The Backblaze B2 API allows to upload images to [Backblaze's cloud storage system](https://www.backblaze.com/b2/cloud-storage.html).
 
@@ -89,13 +95,13 @@ The Backblaze B2 API allows to upload images to [Backblaze's cloud storage syste
 
 Select **S3 Compatible** storage API for **B2 S3 Storage** (current offering):
 
-| B2 Value       | Chevereto Storage                                |
-| -------------- | ------------------------------------------------ |
-| Region         | `us-west-002` (take note from your Endpoint)     |
-| keyID          | Storage key                                      |
-| applicationKey | Storage secret                                   |
-| Endpoint*      | `https://s3.us-west-002.backblazeb2.com`         |
-| URL            | `https://f002.backblazeb2.com/file/your_bucket/` |
+| B2 Value       | Chevereto Storage                              |
+| -------------- | ---------------------------------------------- |
+| Region         | `us-west-002` (take note from your Endpoint)   |
+| keyID          | Storage key                                    |
+| applicationKey | Storage secret                                 |
+| Endpoint*      | https://s3.us-west-002.backblazeb2.com         |
+| URL            | https://f002.backblazeb2.com/file/your_bucket/ |
 
 > (*) You will find the endpoint under the bucket details.
 
@@ -106,11 +112,11 @@ Select **Backblaze B2** storage API for legacy **B2 Storage**:
 | keyID          | Storage key (Account ID)                |
 | applicationKey | Storage secret (Master Application Key) |
 
-## FTP
+### FTP
 
 The FTP API allows to upload images to a server implementing the [File Transfer Protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
 
-## Google Cloud
+### Google Cloud
 
 The Google Cloud API allows to upload images to a Google Cloud Storage bucket. You will need a [Google Cloud](https://cloud.google.com/) service account and [activate cloud storage](https://cloud.google.com/storage/docs/signup) for this.
 
@@ -130,15 +136,15 @@ To setup Google Cloud Storage:
 - Go yo **keys** and create a new **JSON key**
 - Your browser will start to download the JSON key file, the contents of the file is what you need to paste on Chevereto's **Secret Key** textarea
 
-## Local
+### Local
 
 The [Local API](../dashboard/external-storage.md#local) allows to upload images to any filesystem path in the server.
 
-## Microsoft Azure
+### Microsoft Azure
 
 The Microsoft Azure API allows to upload images to [Microsoft Azure Storage](https://azure.microsoft.com/en-us/services/storage/).
 
-## OpenStack
+### OpenStack
 
 The [OpenStack API](../dashboard/external-storage.md#openstack) allows to upload images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
 
@@ -152,7 +158,7 @@ The [OpenStack API](../dashboard/external-storage.md#openstack) allows to upload
   - Tenant name: Your `project id`, found on OpenStack Horizon on the left side (CURRENT PROJECT))
   - URL: Your URL to access the container (see [RunAbove CNAME](https://community.runabove.com/kb/en/object-storage/how-to-put-object-storage-behind-your-domain-name.html))
 
-## S3 Compatible
+### S3 Compatible
 
 The S3 Compatible API allows to upload images to any server implementing the Amazon S3 standard, also known as "AWS S3 API". The configuration is exactly the same as Amazon S3, but it requires to provide the provider endpoint.
 
@@ -169,6 +175,6 @@ Some providers supporting S3 API are:
 - Tencent Cloud Object Storage (COS)
 - Wasabi
 
-## SFTP
+### SFTP
 
 The SFTP API allows to upload images to a server implementing the [SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol).

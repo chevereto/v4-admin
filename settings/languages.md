@@ -2,9 +2,7 @@
 
 `/dashboard/settings/languages`
 
-::: tip
-Check our [language customization](../customization/language.md) guide if you need to add new languages or just alter some language strings.
-:::
+👉 Check our [language customization](https://v4-docs.chevereto.com/developer/customization/language.html) if you need to add new languages or alter some language strings.
 
 ## Default language
 

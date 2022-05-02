@@ -20,9 +20,7 @@ Placing the content at these directories following the [parsing formats](#parsin
 | parse-albums/ | [Top-level folders as albums](#top-level-folders-as-albums)   |
 | no-parse/     | [No folder parsing](#no-parse)                                |
 
-::: tip
-Go to `dashboard/bulk` to review importing jobs.
-:::
+👉 Go to `dashboard/bulk` to review importing jobs.
 
 ### Charset
 
@@ -78,9 +76,7 @@ The process won't be carried until this file gets removed. This comes handy when
 
 The bulk importer scans the target importing directory and creates content accordingly parsing rules described below. User assets (avatar, background image) will get uploaded to the system user folder.
 
-::: tip
-The parser creates users and albums only if those doesn't exists. It detects if `username` exists, and it does the same for albums (based on the album name + its owner).
-:::
+💡 The parser creates users and albums only if those doesn't exists. It detects if `username` exists, and it does the same for albums (based on the album name + its owner).
 
 ### Top-level folder as username
 
@@ -146,17 +142,13 @@ The importing jobs statuses get defined as follow:
 | Canceled  | Job aborted by the user                         |
 | Completed | Job completed (everything parsed)               |
 
-::: tip
-Importing may show "completed" when there's nothing else to parse, but internally it will get re-queued automatically.
-:::
+💡 Importing may show "completed" when there's nothing else to parse, but internally it will get re-queued automatically.
 
 ## Metadata
 
 The bulk importer supports metadata using the JSON format, same as [Google Photos](#importing-from-google-photos). Metadata must be provided per content basis, meaning that you must use one metadata file for each content.
 
-::: tip UTF-8
-Metadata must be in UTF-8 format. Don't forget to fix your charset.
-:::
+✅ Metadata must be in **UTF-8** format. Don't forget to fix your charset.
 
 | Content                             | Type     | Metadata file                        |
 | ----------------------------------- | -------- | ------------------------------------ |
@@ -205,9 +197,7 @@ JSON metadata file below provides a sample metadata for `machine-gun.jpg`.
 }
 ```
 
-::: tip Image categories
-Image categories will be created if needed long as you provide both `name` and `urlKey`.
-:::
+💡 Image categories will be created if needed long as you provide both `name` and `urlKey`.
 
 ### Album metadata
 

@@ -3,9 +3,7 @@ home: true
 heroImage: /logo.svg
 heroText: V4 Admin Manual
 tagline: Documentation for administrators of Chevereto V4 based systems
-# actionText: Dashboard →
-# actionLink: /dashboard/
-footer: Admin's Manual for Chevereto V4
+footer: The Chevereto V4 admin manual
 ---
 
 # 👸 Admin Manual
