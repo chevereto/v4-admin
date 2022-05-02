@@ -1,26 +1,24 @@
-# Bulk content importer
+# 📥 Bulk importer
 
-This tool allows to **mass import** images, albums, and users by parsing the contents of a filesystem location. It is intended to be used when you want to import a massive amount of content that otherwise will be troublesome to import by using the API or the web gui.
+`/dashboard/bulk-importer`
 
-::: tip Importing != Syncing
-Importing takes the content from the importing path and *import it* into database, filesystem or external storage. Failed files will be moved to a special directory at `./importing/failed/`.
-:::
+This tool allows to **mass import** images, albums, and users by parsing the contents of a filesystem location. It is intended to be used when you want to import a massive amount of content that otherwise will be troublesome to import by using the API or the web user interface.
+
+💡 Importing takes the content from the importing path and import it into the system. That's database, filesystem and/or external storage. The system doesn't mirror a directory, it imports it and remove the file from the import path. Failed files will be stored at `./importing/failed/`.
 
 ## How to use it
 
-::: tip demo-importing
-Check the repository at [chevereto/demo-importing](https://github.com/chevereto/demo-importing) for an example on how to organize your files to use the Bulk content importer.
-:::
+💡 Check the repository at [chevereto/demo-importing](https://github.com/chevereto/demo-importing) for an example on how to organize your files to use the Bulk content importer.
 
-Bulk content importer works by scanning the `importing/` path, where folders are used to denote a given parsing format for the files contained within.
+Bulk importer works by scanning the `importing/` path, where folders are used to denote a given parsing format for the files contained within.
 
 Placing the content at these directories following the [parsing formats](#parsing-formats) conventions will enable to import images to users created as a folder, add categories, etc.
 
-| `./importing/`  | Parsing                                                       |
-| --------------- | ------------------------------------------------------------- |
-| `parse-users/`  | [Top-level folder as username](#top-level-folder-as-username) |
-| `parse-albums/` | [Top-level folders as albums](#top-level-folders-as-albums)   |
-| `no-parse/`     | [No folder parsing](#no-parse)                                |
+| ./importing/  | Parsing                                                       |
+| ------------- | ------------------------------------------------------------- |
+| parse-users/  | [Top-level folder as username](#top-level-folder-as-username) |
+| parse-albums/ | [Top-level folders as albums](#top-level-folders-as-albums)   |
+| no-parse/     | [No folder parsing](#no-parse)                                |
 
 ::: tip
 Go to `dashboard/bulk` to review importing jobs.
@@ -33,35 +31,42 @@ Files and `.json` metadata must be in UTF-8.
 ### Command
 
 <code-group>
-<code-block title="V3.20+">
+<code-block title="Shell">
 ```sh
-sudo -u www-data php /var/www/html/cli.php -C importing
+sudo -u www-data php /var/www/html/app/bin/legacy -C importing
 ```
 </code-block>
 
-<code-block title="Older">
+<code-block title="Docker">
 ```sh
-sudo -u www-data IS_CRON=1 THREAD_ID=1 php importing.php
+docker exec -it --user www-data container_name app/bin/legacy -C importing
 ```
 </code-block>
 </code-group>
 
 ### Cron entry
 
-The importing command can be automatically scheduled by using [cron](https://en.wikipedia.org/wiki/Cron):
-
-```sh
-* * * * * COMMAND_HERE >/dev/null 2>&1
-```
+The importing command can be automatically scheduled by using [CRON](https://v4-docs.chevereto.com/application/stack/cron.html).
 
 ### Threads
 
 You can speed up the process by running the importing in multiple threads by passing different `env` for `THREAD_ID`.
 
+<code-group>
+<code-block title="Shell">
 ```sh
-sudo -u www-data THREAD_ID=1 php cli.php -C importing
-sudo -u www-data THREAD_ID=2 php cli.php -C importing
+THREAD_ID=1 sudo -u www-data php /var/www/html/app/bin/legacy -C importing
+THREAD_ID=2 sudo -u www-data php /var/www/html/app/bin/legacy -C importing
 ```
+</code-block>
+
+<code-block title="Docker">
+```sh
+docker exec -it --user www-data THREAD_ID=2 container_name app/bin/legacy -C importing
+docker exec -it --user www-data THREAD_ID=2 container_name app/bin/legacy -C importing
+```
+</code-block>
+</code-group>
 
 ### File locking
 
@@ -153,13 +158,13 @@ The bulk importer supports metadata using the JSON format, same as [Google Photo
 Metadata must be in UTF-8 format. Don't forget to fix your charset.
 :::
 
-| Content                               | Type     | Metadata file                          |
-| ------------------------------------- | -------- | -------------------------------------- |
-| `rodolfo/`                            | username | `rodolfo/metadata.json`                |
-| `rodolfo/weapons/`                    | album    | `rodolfo/weapons/metadata.json`        |
-| `rodolfo/weapons/machine-gun.jpg`     | image    | `rodolfo/weapons/machine-gun.json`     |
-| `rodolfo/weapons/rocket-launcher.jpg` | image    | `rodolfo/weapons/rocket-launcher.json` |
-| `rodolfo/logo-alt.png`                | image    | `rodolfo/logo-alt.json`                |
+| Content                             | Type     | Metadata file                        |
+| ----------------------------------- | -------- | ------------------------------------ |
+| rodolfo                             | username | rodolfo/metadata.json                |
+| rodolfo/weapons                     | album    | rodolfo/weapons/metadata.json        |
+| rodolfo/weapons/machine-gun.jpg     | image    | rodolfo/weapons/machine-gun.json     |
+| rodolfo/weapons/rocket-launcher.jpg | image    | rodolfo/weapons/rocket-launcher.json |
+| rodolfo/logo-alt.png                | image    | rodolfo/logo-alt.json                |
 
 Tree below shows metadata for the table above.
 
@@ -224,12 +229,12 @@ JSON metadata file bellow provides a sample metadata for `guns/` album.
 
 For album privacy, you can pick from:
 
-| Privacy type       | Effect                                        |
-| ------------------ | --------------------------------------------- |
-| `public`           | Public album (default)                        |
-| `private`          | Private album for owner                       |
-| `private_but_link` | Same as `private` + those with the album link |
-| `password`         | Will set the password for accessing the album |
+| Privacy type     | Effect                                        |
+| ---------------- | --------------------------------------------- |
+| public           | Public album (default)                        |
+| private          | Private album for owner                       |
+| private_but_link | Same as `private` + those with the album link |
+| password         | Will set the password for accessing the album |
 
 For example, if you need `private_but_link` the metadata property should look like this:
 

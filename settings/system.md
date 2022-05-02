@@ -33,28 +33,6 @@ This is automatically enabled if the installation holds more than 1,000,000 (1M)
 | Enabled  | Dump the update query (queries should be manually executed) |
 | Disabled | Run the update query (queries will be executed directly)    |
 
-## SEO image URLs
-
-Toggles image SEO URLs.
-
-When enabled, the image URL will contain its title, like `/image/image-title.<id>`.
-
-| Value    | Effect                 |
-| -------- | ---------------------- |
-| Enabled  | Enable SEO image URLs  |
-| Disabled | Disable SEO image URLs |
-
-## SEO album URLs
-
-Toggles album SEO URLs.
-
-When enabled, the album URL will contain its title, like `/album/album-name.<id>`.
-
-| Value    | Effect                 |
-| -------- | ---------------------- |
-| Enabled  | Enable SEO album URLs  |
-| Disabled | Disable SEO album URLs |
-
 ## Minify code
 
 Toggles CSS and JSS minification.

@@ -2,11 +2,7 @@
 
 `/dashboard/settings/banners`
 
-The system comes with 16 predefined ad spaces (32 if you consider SFW and NSFW usage) that allows you to generate revenue.
-
-::: tip
-Although ad slots are intended to be used to place banners, you can use these for placing any kind of HTML code.
-:::
+There are 16 predefined ad spaces (32 if you consider SFW and NSFW usage).
 
 | Location                  | Ad spaces                                                                                                                                                                    |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

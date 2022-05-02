@@ -2,9 +2,7 @@
 
 `/dashboard/settings/email`
 
-::: tip
-Test email delivery results at [tools](./tools.md#send-test-email).
-:::
+💡 Test email delivery results at [tools](./tools.md#send-test-email).
 
 ## From name
 
