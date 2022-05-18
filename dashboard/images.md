@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # 🏞 Images
 
 `/dashboard/images`

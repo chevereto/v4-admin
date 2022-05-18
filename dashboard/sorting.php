@@ -5,6 +5,5 @@ return [
     'images.md',
     'albums.md',
     'users.md',
-    'settings.md',
     'bulk-importer.md',
 ];

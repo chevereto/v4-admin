@@ -2,7 +2,7 @@
 
 `/dashboard/bulk-importer`
 
-This tool allows to **mass import** images, albums, and users by parsing the contents of a filesystem location. It is intended to be used when you want to import a massive amount of content that otherwise will be troublesome to import by using the API or the web user interface.
+At **Dashboard Bulk importer** you can mass import images, albums, and users by parsing the contents of a filesystem location. It is intended to be used when you want to import a massive amount of content that otherwise will be troublesome to import by using the API or the web user interface.
 
 💡 Importing takes the content from the importing path and import it into the system. That's database, filesystem and/or external storage. The system doesn't mirror a directory, it imports it and remove the file from the import path. Failed files will be stored at `./importing/failed/`.
 

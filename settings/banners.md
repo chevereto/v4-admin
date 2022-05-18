@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # Banners
 
 `/dashboard/settings/banners`

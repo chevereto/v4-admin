@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # 🗂 Albums
 
 `/dashboard/albums`
