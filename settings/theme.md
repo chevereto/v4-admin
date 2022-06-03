@@ -99,6 +99,16 @@ Toggles the display of image Exif data.
 | Enabled  | Show image Exif data              |
 | Disabled | Don't show (hide) image Exif data |
 
+## Image first tab
+
+Determine the first tab on image page.
+
+| Value  | First tab                      |
+| ------ | ------------------------------ |
+| Embeds | Embed codes                    |
+| About  | About (description, Exif)      |
+| Info   | Admin only (extensive details) |
+
 ## Enable social share
 
 Toggles the social share buttons for sharing the image.

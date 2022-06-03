@@ -159,6 +159,25 @@ Determines the HTML comment code, which will get added to image view.
 | ------ | ----- |
 | String | HTML  |
 
+## Project Arachnid
+
+Toggles usage of [Project Arachnid](https://projectarachnid.ca/) service.
+
+| Value    | Effect                   |
+| -------- | ------------------------ |
+| Enabled  | Enable Project Arachnid  |
+| Disabled | Disable Project Arachnid |
+
+## Project Arachnid API Key
+
+*Applies only if `Project Arachnid` is `Enabled`.
+
+Determines the Project Arachnid API key.
+
+| Type   | Value                    |
+| ------ | ------------------------ |
+| String | Project Arachnid API key |
+
 ## ModerateContent
 
 Toggles usage of [ModerateContent](https://www.moderatecontent.com/) service.
