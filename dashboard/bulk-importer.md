@@ -31,13 +31,14 @@ Files and `.json` metadata must be in UTF-8.
 <code-group>
 <code-block title="Shell">
 ```sh
-sudo -u www-data php /var/www/html/app/bin/legacy -C importing
+sudo -u www-data app/bin/legacy -C bulk-importer
 ```
 </code-block>
 
 <code-block title="Docker">
 ```sh
-docker exec -it --user www-data container_name app/bin/legacy -C importing
+docker exec -it --user www-data container_name \
+    app/bin/legacy -C bulk-importer
 ```
 </code-block>
 </code-group>
@@ -53,15 +54,19 @@ You can speed up the process by running the importing in multiple threads by pas
 <code-group>
 <code-block title="Shell">
 ```sh
-THREAD_ID=1 sudo -u www-data php /var/www/html/app/bin/legacy -C importing
-THREAD_ID=2 sudo -u www-data php /var/www/html/app/bin/legacy -C importing
+THREAD_ID=1 sudo -u www-data \
+    app/bin/legacy -C bulk-importer
+THREAD_ID=2 sudo -u www-data \
+    app/bin/legacy -C bulk-importer
 ```
 </code-block>
 
 <code-block title="Docker">
 ```sh
-docker exec -it --user www-data THREAD_ID=2 container_name app/bin/legacy -C importing
-docker exec -it --user www-data THREAD_ID=2 container_name app/bin/legacy -C importing
+docker exec -it --user www-data THREAD_ID=1 container_name \
+    app/bin/legacy -C bulk-importer
+docker exec -it --user www-data THREAD_ID=2 container_name \
+    app/bin/legacy -C bulk-importer
 ```
 </code-block>
 </code-group>
