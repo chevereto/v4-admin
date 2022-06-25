@@ -14,7 +14,7 @@ To enable Google Google Sign-in:
 
 After configuration is complete, **take note** of the **client ID** and **Client Secret** that got created.
 
-Go to [Google login settings](../dashboard/social-networks.md#google) to enable Google login in your Chevereto installation.
+* Go to [Google login settings](../settings/social-networks.md#google) to enable.
 
 ## VK login
 
@@ -25,6 +25,8 @@ To enable VK you will need to create a [VK app](https://vk.com/dev).
 * Click on "Connect site"
 * Authorized redirect URI: `http://www.yourwebsite.com/connect/vk`
 * In app settings page make sure that Open API is enabled
+
+* Go to [VK login settings](../settings/social-networks.md#vk) to enable.
 
 ## Twitter login
 
@@ -37,6 +39,8 @@ To enable Twitter login you will need to create a [Twitter app](https://apps.twi
   * Allow this application to be used to Sign in with Twitter (On).
   * Use the following permissions:
     * Read and Write (selected)
+
+* Go to [Twitter login settings](../settings/social-networks.md#twitter) to enable.
 
 ## Facebook login
 
@@ -56,3 +60,5 @@ To enable Facebook login you will need to create a [Facebook app](https://develo
 * Once your app gets approved as public you can go to "Dashboard" and then copy "App ID" and "App Secret" in your Chevereto website (Dashboard > Settings > Social Networks)
 
 Take special note for the Facebook APP Review. Your app will be only visible to you until you complete all the information required by Facebook.
+
+* Go to [Facebook login settings](../settings/social-networks.md#facebook) to enable.

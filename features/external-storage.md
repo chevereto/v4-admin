@@ -138,15 +138,15 @@ To setup Google Cloud Storage:
 
 ### Local
 
-The [Local API](../dashboard/external-storage.md#local) allows to upload images to any filesystem path in the server.
+The [Local API](../settings/external-storage.md#local) allows to upload images to any filesystem path in the server.
 
 ### Microsoft Azure
 
-The Microsoft Azure API allows to upload images to [Microsoft Azure Storage](https://azure.microsoft.com/en-us/services/storage/).
+The Microsoft Azure API allows to upload images to [Microsoft Azure Storage](https://azure.microsoft.com/services/storage/).
 
 ### OpenStack
 
-The [OpenStack API](../dashboard/external-storage.md#openstack) allows to upload images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
+The [OpenStack API](../settings/external-storage.md#openstack) allows to upload images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
 
 - OpenStack configuration for RunAbove:
   - Identity URL: <https://auth.Runabove.io/v2.0>
