@@ -60,6 +60,14 @@ Adding a CNAME record for the above URL will allow you to end up with a Storage 
 https://s3-cdn.domain.com/
 ```
 
+## Lifecycle settings
+
+::: danger
+Providers of cloud storage may use a feature called "lifecycle" for the files stored there. Make sure to edit the storage provider configuration to don't use this feature.
+:::
+
+When enabled, the storage provider will keep copies of all the states of the files (modified, deleted, etc.) which may seriously increase your storage costs. We highly recommend to always disable this kind of settings, when asked select to **keep only the last version of the file**.
+
 ## Providers
 
 ### Alibaba Cloud OSS
