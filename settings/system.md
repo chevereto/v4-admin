@@ -67,18 +67,14 @@ This value is shown only for reference. It shouldn't be edited.
 | ------ | --------- |
 | String | bnnnfer98 |
 
-## PHP error reporting
+## Debug errors
 
-Toggles PHP error reporting. When enabled, the system will use:
+Toggles debug error reporting. When enabled, Chevereto will display the errors to the screen.
 
-```php
-error_reporting(E_ALL ^ E_NOTICE);
-```
-
-| Value    | Effect                      |
-| -------- | --------------------------- |
-| Enabled  | Enable PHP error reporting  |
-| Disabled | Disable PHP error reporting |
+| Value    | Effect              |
+| -------- | ------------------- |
+| Enabled  | Enable debug error  |
+| Disabled | Disable debug error |
 
 ## Debug level
 
