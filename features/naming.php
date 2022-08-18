@@ -2,5 +2,5 @@
 
 return [
     'external-storage.md' => '🪣 External storage',
-    'social-login.md' => '🔐 Social login',
+    'login-providers.md' => '🔌 Login providers',
 ];

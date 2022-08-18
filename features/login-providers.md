@@ -1,4 +1,4 @@
-# 🔐 Social login
+# 🔌 Login providers
 
 Social login enables users to sign up to your Chevereto instance by connecting their third-party social accounts for login.
 
