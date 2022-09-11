@@ -6,4 +6,5 @@ return [
     'albums.md' => '🗂 Albums',
     'users.md' => '🙂 Users',
     'bulk-importer.md' => '📥 Bulk importer',
+    'settings.md' => '⚙️ Settings',
 ];
