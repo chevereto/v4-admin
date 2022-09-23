@@ -5,7 +5,6 @@ Chevereto includes support for login providers, enabling your users to sign up b
 ## Supported providers
 
 * Amazon
-* Apple
 * BitBucket
 * Discord
 * Dribbble
