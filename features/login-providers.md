@@ -4,43 +4,53 @@ Chevereto includes support for login providers, enabling your users to sign up b
 
 ## Supported providers
 
-* Amazon
-* BitBucket
-* Discord
-* Dribbble
-* Dropbox
-* Facebook
-* GitHub
-* GitLab
-* Google
-* Instagram
-* LinkedIn
-* Mailru
-* Medium
-* Odnoklassniki
-* ORCID
-* QQ
-* Reddit
-* Spotify
-* Stack
-* Steam
-* Strava
-* Telegram
-* Tumblr
-* Twitch
-* Twitter
-* VK
-* WeChat
-* WordPress
-* Yahoo
-* Yandex
+Table below contains all the supported providers and the handle used for it.
+
+| Provider      | Handle        |
+| ------------- | ------------- |
+| Facebook      | facebook      |
+| Twitter       | twitter       |
+| Google        | google        |
+| VK            | vkontakte     |
+| Apple         | apple         |
+| Amazon        | amazon        |
+| BitBucket     | bitbucket     |
+| Discord       | discord       |
+| Dribbble      | dribbble      |
+| Dropbox       | dropbox       |
+| GitHub        | github        |
+| GitLab        | gitlab        |
+| Instagram     | instagram     |
+| LinkedIn      | linkedin      |
+| Mailru        | mailru        |
+| Medium        | medium        |
+| Odnoklassniki | odnoklassniki |
+| ORCID         | orcid         |
+| Reddit        | reddit        |
+| Spotify       | spotify       |
+| Steam         | steam         |
+| Strava        | strava        |
+| Telegram      | telegram      |
+| Tumblr        | tumblr        |
+| Twitch        | twitchtv      |
+| WeChat        | wechat        |
+| WordPress     | wordpress     |
+| Yandex        | yandex        |
+| Yahoo         | yahoo         |
+| QQ            | qq            |
 
 ## Create an app
 
-To configure a login provider you will require to create an application at the target provider. When doing that keep in mind that the connect/return URL you need to use is `https://yourwebsite.com/connect`.
-
 👉 Refer to your login provider developer documentation in order to setup your application.
+
+To configure a login provider you will require to create an application at the target provider. The connect/return URL you need to use is:
+
+```plain
+https://yourwebsite.com/connect/HANDLE/
+```
+
+Where `HANDLE` is the provider handle from the [supported providers](#supported-providers) table.
 
 ## Provide app credentials
 
-Once you get the application at your provider you have to simply enter these credentials at [Settings > Login providers](../settings/login-providers.md).
+Enter the application credentials at [Settings > Login providers](../settings/login-providers.md).
