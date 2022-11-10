@@ -47,68 +47,68 @@ Determines the CDN for the website. The CDN URL will be used for all local stati
 | ------ | ------------------ |
 | String | The CDN (pull) URL |
 
-## reCAPTCHA
+## CAPTCHA
 
-Toggles usage of [reCAPTCHA](https://www.google.com/recaptcha/about/).
+Toggles usage of [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA).
 
-| Value    | Effect            |
-| -------- | ----------------- |
-| Enabled  | Enable reCAPTCHA  |
-| Disabled | Disable reCAPTCHA |
+| Value    | Effect          |
+| -------- | --------------- |
+| Enabled  | Enable CAPTCHA  |
+| Disabled | Disable CAPTCHA |
 
-## reCAPTCHA version
+## CAPTCHA API
 
-*Applies only if `reCAPTCHA` is set to `Enabled`.
+*Applies only if `CAPTCHA` is set to `Enabled`.
 
-Determines the reCAPTCHA version. It must match the version spec for your key.
+Determines the CAPTCHA API.
 
-| Type    | Values |
-| ------- | ------ |
-| Integer | 2, 3   |
+| Value        | Effect           |
+| ------------ | ---------------- |
+| reCAPTCHA v2 | Use reCAPTCHA v2 |
+| reCAPTCHA v3 | Use reCAPTCHA v3 |
+| hCaptcha     | Use hCaptcha     |
 
-## reCAPTCHA site key
+## CAPTCHA site key
 
-*Applies only if `reCAPTCHA` is set to `Enabled`.
+*Applies only if `CAPTCHA` is set to `Enabled`.
 
-Determines the reCAPTCHA site key.
+Determines the CAPTCHA site key.
+
+| Type   | Values           |
+| ------ | ---------------- |
+| String | CAPTCHA site key |
+
+## CAPTCHA secret key
+
+*Applies only if `CAPTCHA` is set to `Enabled`.
+
+Determines the CAPTCHA secret key.
 
 | Type   | Values             |
 | ------ | ------------------ |
-| String | reCAPTCHA site key |
+| String | CAPTCHA secret key |
 
-## reCAPTCHA secret key
+## CAPTCHA threshold
 
-*Applies only if `reCAPTCHA` is set to `Enabled`.
+*Applies only if `CAPTCHA` is set to `Enabled`.
 
-Determines the reCAPTCHA secret key.
+Determines the CAPTCHA threshold. This is how many failed attempts are accepted before asking for CAPTCHA.
 
-| Type   | Values               |
-| ------ | -------------------- |
-| String | reCAPTCHA secret key |
+| Value | Effect                                    |
+| ----- | ----------------------------------------- |
+| 0     | Always display CAPTCHA                    |
+| n     | Display CAPTCHA after (n) failed attempts |
 
-## reCAPTCHA threshold
+## Force CAPTCHA on contact page
 
-*Applies only if `reCAPTCHA` is set to `Enabled`.
+*Applies only if  CAPTCHA` is set to `Enabled`.
 
-Determines the reCAPTCHA threshold.
+Toggle showing (forced) CAPTCHA on contact page.
 
-For example, if you
-
-| Value | Effect                                                                                                       |
-| ----- | ------------------------------------------------------------------------------------------------------------ |
-| 0     | Always display reCAPTCHA                                                                                     |
-| n     | Display reCAPTCHA after (n) failed attempts, for example when failing to provide the right login credentials |
-
-## Force reCAPTCHA on contact page
-
-*Applies only if `reCAPTCHA` is set to `Enabled`.
-
-Toggle showing (forced) reCAPTCHA on contact page.
-
-| Value    | Effect                                   |
-| -------- | ---------------------------------------- |
-| Enabled  | Enable forced reCAPTCHA on contact page  |
-| Disabled | Disable forced reCAPTCHA on contact page |
+| Value    | Effect                                 |
+| -------- | -------------------------------------- |
+| Enabled  | Enable forced CAPTCHA on contact page  |
+| Disabled | Disable forced CAPTCHA on contact page |
 
 ## Comments API
 
