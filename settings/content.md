@@ -46,3 +46,11 @@ Toggles the display of NSFW content in randomized image fetching (`?random`).
 | -------- | ---------------------------------------- |
 | Enabled  | Allows NSFW content to appear on random  |
 | Disabled | Disable NSFW content to appear on random |
+
+## Stop words
+
+Define words that won't be allowed for content. One sentence per line, supports regex.
+
+| Value     | Effect                                       |
+| --------- | -------------------------------------------- |
+| String(s) | Blocks the alleged content due to stop words |
