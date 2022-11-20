@@ -1,6 +1,6 @@
-# API
+# Guest API
 
-`/dashboard/settings/api`
+`/dashboard/settings/guest-api`
 
 ## Public API key
 
