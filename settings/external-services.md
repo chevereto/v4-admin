@@ -28,25 +28,6 @@ Toggles usage of [Stop Forum Spam](https://stopforumspam.com/) service.
 | Enabled  | Enable Stop Forum Spam  |
 | Disabled | Disable Stop Forum Spam |
 
-## CDN
-
-Toggles usage of [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) (Content delivery network).
-
-| Value    | Effect      |
-| -------- | ----------- |
-| Enabled  | Enable CDN  |
-| Disabled | Disable CDN |
-
-## CDN URL
-
-*Applies only if `CDN` is set to `Enabled`.
-
-Determines the CDN for the website. The CDN URL will be used for all local static resources.
-
-| Type   | Description        |
-| ------ | ------------------ |
-| String | The CDN (pull) URL |
-
 ## CAPTCHA
 
 Toggles usage of [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA).
@@ -109,55 +90,6 @@ Toggle showing (forced) CAPTCHA on contact page.
 | -------- | -------------------------------------- |
 | Enabled  | Enable forced CAPTCHA on contact page  |
 | Disabled | Disable forced CAPTCHA on contact page |
-
-## Comments API
-
-Determines the comment API to use.
-
-| Value           | Effect                                            |
-| --------------- | ------------------------------------------------- |
-| Disqus          | Use [Disqus](https://disqus.com/) comment service |
-| JavaScript/HTML | Use any HTML comment provider                     |
-
-## Disqus shortname
-
-*Applies only if `Comments API` is set to `Disqus`.
-
-Determines the Disqus shortname.
-
-| Type   | Value            |
-| ------ | ---------------- |
-| String | Disqus shortname |
-
-## Disqus secret key
-
-*Applies only if `Comments API` is set to `Disqus`.
-
-Determines the Disqus secret key.
-
-| Type   | Value             |
-| ------ | ----------------- |
-| String | Disqus secret key |
-
-## Disqus public key
-
-*Applies only if `Comments API` is set to `Disqus`.
-
-Determines the Disqus public key.
-
-| Type   | Value             |
-| ------ | ----------------- |
-| String | Disqus public key |
-
-## Comment code
-
-*Applies only when `Comments API` is set to `JavaScript/HTML`
-
-Determines the HTML comment code, which will get added to image view.
-
-| Type   | Value |
-| ------ | ----- |
-| String | HTML  |
 
 ## Project Arachnid
 
@@ -231,13 +163,3 @@ Determines which content will get NSFW flagged by ModerateContent.
 | Disabled       | Don't flag any content      |
 | Adult          | Flag adult as NSFW          |
 | Teen and adult | Flag adult and teen as NSFW |
-
-## Analytics code
-
-Determines the analytics HTML code that will track stats for your website. This is where you can place the tracking code provided by Google Analytics, Heap, Yandex.Metrica, [Matomo](https://matomo.org/), Mixpanel, etc.
-
-Code you enter in this section will be printed in all views.
-
-| Type   | Description |
-| ------ | ----------- |
-| String | HTML        |
