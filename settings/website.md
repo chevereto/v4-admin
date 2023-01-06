@@ -14,27 +14,6 @@ Determines the `doctitle` for your website, mainly used in homepage.
 
 A brief summary on what's your website.
 
-## Powered by Chevereto
-
-Determines if the "Powered by Chevereto" appears on your website.
-
-Showing "Powered by Chevereto" allows others to know the software and it helps us to get known.
-
-| Value    | Effect                                |
-| -------- | ------------------------------------- |
-| Enabled  | Enable "Powered by Chevereto" footer  |
-| Disabled | Disable "Powered by Chevereto" footer |
-
-## HTTPS
-
-Determines how HTTPS will be handled for the application URLs.
-
-| Value     | Effect                                                   |
-| --------- | -------------------------------------------------------- |
-| Automatic | Use HTTPS on URLs if web server is configured with HTTPS |
-| Forced    | Always use HTTPS                                         |
-| Disabled  | Disable HTTPS (all URLs will use `http`)                 |
-
 ## Default time zone
 
 Determines the default system time zone. This will be the default timezone for new user sign-up.
@@ -82,6 +61,17 @@ Random allows to randomly show a public image. It enables `?random` to fetch a r
 | -------- | --------------------- |
 | Enabled  | Enable random button  |
 | Disabled | Disable random button |
+
+## Powered by Chevereto
+
+Determines if the "Powered by Chevereto" appears on your website.
+
+Showing "Powered by Chevereto" allows others to know the software and it helps us to get known.
+
+| Value    | Effect                                |
+| -------- | ------------------------------------- |
+| Enabled  | Enable "Powered by Chevereto" footer  |
+| Disabled | Disable "Powered by Chevereto" footer |
 
 ## Likes
 
