@@ -6,7 +6,7 @@ IP bans allows to ban IP addresses and IP ranges from using the system.
 
 ## Adding IP bans
 
-Click on "Add IP ban".
+Click on "Add".
 
 ## IP ban values
 
