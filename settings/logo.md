@@ -1,6 +1,6 @@
 # Logo
 
-## Logo option
+## Logo select
 
 Determines the logo option to use.
 
