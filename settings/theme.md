@@ -2,67 +2,17 @@
 
 `/dashboard/settings/theme`
 
-## Tone
+## Theme select
 
-Determines the theme tone.
+Determines the theme to use.
 
-| Value | Effect         |
-| ----- | -------------- |
-| Light | Use light mode |
-| Dark  | Use dark mode  |
+## Default palette
 
-## Main color
+Determines the default palette to use.
 
-Determines the main color.
-
-| Type | Example |
-| ---- | ------- |
-| Hex  | #00A7DA |
-
-## Top bar button color
-
-Determines the top bar button color.
-
-## Enable vector logo
-
-Toggles the use of vector logo.
-
-| Value    | Effect                |
-| -------- | --------------------- |
-| Enabled  | Use vector logo       |
-| Disabled | Don't use vector logo |
-
-## Vector logo image
-
-The vector logo image. The size is just for reference, the system will display the logo fixing height.
-
-| Type | Default |
-| ---- | ------- |
-| SVG  | 500x76  |
-
-## Raster logo image
-
-The raster logo image. The size is just for reference, the system will display the logo fixing height.
-
-| Type | Default |
-| ---- | ------- |
-| PNG  | 314x48  |
-
-## Logo height
-
-Determines the logo height, which will be fixed and width will be adjusted.
-
-| Type    | Recommended           |
-| ------- | --------------------- |
-| Integer | Min: `20` - Max: `50` |
-
-## Favicon image
-
-Determines the favicon image, the icon which appears in the web browser bar.
-
-| Type | Default |
-| ---- | ------- |
-| PNG  | 300x300 |
+| Value  | Effect                          |
+| ------ | ------------------------------- |
+| Select | Use selected palette as default |
 
 ## Image load max. filesize (MB)
 
@@ -135,6 +85,65 @@ Toggles the display of the NSFW checkbox.
 | -------- | -------------------------------- |
 | Enabled  | Enable display of NSFW checkbox  |
 | Disabled | DIsable display of NSFW checkbox |
+
+## Comments API
+
+Determines the comment API to use.
+
+| Value           | Effect                                            |
+| --------------- | ------------------------------------------------- |
+| Disqus          | Use [Disqus](https://disqus.com/) comment service |
+| JavaScript/HTML | Use any HTML comment provider                     |
+
+## Disqus shortname
+
+*Applies only if `Comments API` is set to `Disqus`.
+
+Determines the Disqus shortname.
+
+| Type   | Value            |
+| ------ | ---------------- |
+| String | Disqus shortname |
+
+## Disqus secret key
+
+*Applies only if `Comments API` is set to `Disqus`.
+
+Determines the Disqus secret key.
+
+| Type   | Value             |
+| ------ | ----------------- |
+| String | Disqus secret key |
+
+## Disqus public key
+
+*Applies only if `Comments API` is set to `Disqus`.
+
+Determines the Disqus public key.
+
+| Type   | Value             |
+| ------ | ----------------- |
+| String | Disqus public key |
+
+## Comment code
+
+*Applies only when `Comments API` is set to `JavaScript/HTML`
+
+Determines the HTML comment code, which will get added to image view.
+
+| Type   | Value |
+| ------ | ----- |
+| String | HTML  |
+
+## Analytics code
+
+Determines the analytics HTML code that will track stats for your website. This is where you can place the tracking code provided by Google Analytics, Heap, Yandex.Metrica, [Matomo](https://matomo.org/), Mixpanel, etc.
+
+Code you enter in this section will be printed in all views.
+
+| Type   | Description |
+| ------ | ----------- |
+| String | HTML        |
 
 ## Custom CSS code
 
