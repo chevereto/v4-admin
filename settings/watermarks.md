@@ -1,5 +1,9 @@
 # Watermarks
 
+## Watermark select
+
+Toggles watermarking on user uploaded content.
+
 ## Watermark image
 
 The image used to watermark image uploads.
