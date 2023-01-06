@@ -2,15 +2,6 @@
 
 `/dashboard/settings/content`
 
-## Lock NSFW editing
-
-Toggles the NSFW editing.
-
-| Value    | Effect                                     |
-| -------- | ------------------------------------------ |
-| Enabled  | Prevent users from changing the NSFW flag  |
-| Disabled | Allow users to freely change the NSFW flag |
-
 ## Show not safe content in listings
 
 Toggles the display of NSFW content in listings.
@@ -46,6 +37,15 @@ Toggles the display of NSFW content in randomized image fetching (`?random`).
 | -------- | ---------------------------------------- |
 | Enabled  | Allows NSFW content to appear on random  |
 | Disabled | Disable NSFW content to appear on random |
+
+## Lock NSFW editing
+
+Toggles the NSFW editing.
+
+| Value    | Effect                                     |
+| -------- | ------------------------------------------ |
+| Enabled  | Prevent users from changing the NSFW flag  |
+| Disabled | Allow users to freely change the NSFW flag |
 
 ## Stop words
 
