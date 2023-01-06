@@ -6,7 +6,7 @@ Categories classify the uploaded images and generate listings based in each cate
 
 ## Adding categories
 
-Click on **Add category**.
+Click on **Create**.
 
 ## Category values
 
