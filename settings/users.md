@@ -37,15 +37,6 @@ Toggles sending of an email notification when a new user sign up.
 | Enabled  | Notify on new user signup       |
 | Disabled | Don't notify on new user signup |
 
-## Username routing
-
-Toggles the username routing.
-
-| Value    | Effect                    |
-| -------- | ------------------------- |
-| Enabled  | User URL `/username`      |
-| Disabled | User URL `/user/username` |
-
 ## Require email confirmation
 
 Toggles the requirement of confirming the email address on signup.
