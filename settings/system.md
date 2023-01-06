@@ -33,16 +33,24 @@ This is automatically enabled if the installation holds more than 1,000,000 (1M)
 | Enabled  | Dump the update query (queries should be manually executed) |
 | Disabled | Run the update query (queries will be executed directly)    |
 
-## Minify code
+## CDN
 
-Toggles CSS and JSS minification.
+Toggles usage of [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) (Content delivery network).
 
-When enabled, `*.min.js` and `*.min.css` will be automatically used.
+| Value    | Effect      |
+| -------- | ----------- |
+| Enabled  | Enable CDN  |
+| Disabled | Disable CDN |
 
-| Value    | Effect              |
-| -------- | ------------------- |
-| Enabled  | Enable minify code  |
-| Disabled | Disable minify code |
+## CDN URL
+
+*Applies only if `CDN` is set to `Enabled`.
+
+Determines the CDN for the website. The CDN URL will be used for all local static resources.
+
+| Type   | Description        |
+| ------ | ------------------ |
+| String | The CDN (pull) URL |
 
 ## Maintenance
 
@@ -106,3 +114,11 @@ Determines the XR Debug host port to send dump messages.
 | Type   | Example |
 | ------ | ------- |
 | String | 27420   |
+
+### XR Debug Private key
+
+Determines the XR Debug private key to sign messages.
+
+| Type   | Example       |
+| ------ | ------------- |
+| String | `private key` |
