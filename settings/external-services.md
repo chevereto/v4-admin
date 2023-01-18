@@ -2,6 +2,65 @@
 
 `/dashboard/settings/external-services`
 
+## Comments API
+
+Determines the comment API to use.
+
+| Value           | Effect                                            |
+| --------------- | ------------------------------------------------- |
+| Disqus          | Use [Disqus](https://disqus.com/) comment service |
+| JavaScript/HTML | Use any HTML comment provider                     |
+
+## Disqus shortname
+
+*Applies only if `Comments API` is set to `Disqus`.
+
+Determines the Disqus shortname.
+
+| Type   | Value            |
+| ------ | ---------------- |
+| String | Disqus shortname |
+
+## Disqus secret key
+
+*Applies only if `Comments API` is set to `Disqus`.
+
+Determines the Disqus secret key.
+
+| Type   | Value             |
+| ------ | ----------------- |
+| String | Disqus secret key |
+
+## Disqus public key
+
+*Applies only if `Comments API` is set to `Disqus`.
+
+Determines the Disqus public key.
+
+| Type   | Value             |
+| ------ | ----------------- |
+| String | Disqus public key |
+
+## Comment code
+
+*Applies only when `Comments API` is set to `JavaScript/HTML`
+
+Determines the HTML comment code, which will get added to image view.
+
+| Type   | Value |
+| ------ | ----- |
+| String | HTML  |
+
+## Analytics code
+
+Determines the analytics HTML code that will track stats for your website. This is where you can place the tracking code provided by Google Analytics, Heap, Yandex.Metrica, [Matomo](https://matomo.org/), Mixpanel, etc.
+
+Code you enter in this section will be printed in all views.
+
+| Type   | Description |
+| ------ | ----------- |
+| String | HTML        |
+
 ## Akismet spam protection
 
 Toggles usage of [Akismet](https://akismet.com/) service.
