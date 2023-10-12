@@ -62,9 +62,11 @@ For the example above, a file at `https://storage1.demo.chevereto.com/bucket/exa
 
 ## Alibaba Cloud OSS
 
+Storage type: `oss`
+
 ### Endpoint
 
-Besides common settings, Alibaba Cloud OSS requires to provide the endpoint.
+Alibaba Cloud OSS requires to provide the endpoint.
 
 | Type   | Description                |
 | ------ | -------------------------- |
@@ -72,13 +74,17 @@ Besides common settings, Alibaba Cloud OSS requires to provide the endpoint.
 
 ## Amazon S3
 
-Besides common settings, Amazon S3 requires to provide the region.
+Storage type: `s3`
+
+Amazon S3 (AWS S3) requires to provide the region. If your S3 provider isn't AWS you have to use [S3 Compatible](#s3-compatible).
 
 | Type   | Description      |
 | ------ | ---------------- |
 | String | Amazon S3 region |
 
-## Backblaze B2
+## Backblaze B2 (legacy)
+
+Storage type: `b2`
 
 Uses common settings, but Backblaze B2 names key/secret in differently.
 
@@ -89,7 +95,9 @@ Uses common settings, but Backblaze B2 names key/secret in differently.
 
 ## FTP
 
-Besides some common settings, FTP requires other values.
+Storage type: `ftp`
+
+FTP requires other values.
 
 | Value    | Description            | Example                         |
 | -------- | ---------------------- | ------------------------------- |
@@ -101,7 +109,9 @@ Besides some common settings, FTP requires other values.
 
 ## Google Cloud
 
-Besides some common settings, Google Cloud requires to provide the key in JSON format.
+Storage type: `gcloud`
+
+Google Cloud requires to provide the key in JSON format.
 
 ### Private key
 
@@ -111,7 +121,9 @@ Besides some common settings, Google Cloud requires to provide the key in JSON f
 
 ## Local
 
-Besides some common settings, Local requires to provide the local path.
+Storage type: `local`
+
+Local requires to provide the local path.
 
 | Type   | Description |
 | ------ | ----------- |
@@ -119,7 +131,9 @@ Besides some common settings, Local requires to provide the local path.
 
 ## Microsoft Azure
 
-Besides some common settings, Microsoft Azure requires other values.
+Storage type: `azure`
+
+Microsoft Azure requires other values.
 
 | Value    | Description                 |
 | -------- | --------------------------- |
@@ -129,7 +143,9 @@ Besides some common settings, Microsoft Azure requires other values.
 
 ## OpenStack
 
-Besides some common settings, OpenStack requires other values.
+Storage type: `openstack`
+
+OpenStack requires other values.
 
 | Value        | Description                |
 | ------------ | -------------------------- |
@@ -144,7 +160,9 @@ Besides some common settings, OpenStack requires other values.
 
 ## S3 compatible
 
-Besides some common settings, S3 compatible requires to provide the region and the endpoint.
+Storage type: `s3compatible`
+
+S3 compatible requires to provide the region and the endpoint.
 
 | Value    | Description      |
 | -------- | ---------------- |
@@ -152,5 +170,7 @@ Besides some common settings, S3 compatible requires to provide the region and t
 | Endpoint | Storage endpoint |
 
 ## SFTP
+
+Storage type: `sftp`
 
 Same as [FTP](#ftp), but using the [SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) protocol.
