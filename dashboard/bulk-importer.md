@@ -20,7 +20,7 @@ Placing the content at these directories following the [parsing formats](#parsin
 | parse-albums/ | [Top-level folders as albums](#top-level-folders-as-albums)   |
 | no-parse/     | [No folder parsing](#no-parse)                                |
 
-👉 Go to `dashboard/bulk` to review importing jobs.
+👉 Go to `dashboard/bulk-importer` to review importing jobs.
 
 ### Charset
 
