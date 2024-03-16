@@ -1,4 +1,4 @@
-# 🪣 External storage
+# External storage
 
 External storage allows to use external servers for storing user uploads, which helps to leverage your server load and deliver a more reliable website. If you use multiple external storage servers, it will help to distribute the traffic of these assets.
 
@@ -78,16 +78,18 @@ The Alibaba Cloud OSS API allows to upload images to [Alibaba Cloud (Aliyun) Obj
 
 The Amazon S3 API allows to upload images to an [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3) bucket. You will need an [Amazon Web Services](https://aws.amazon.com/) (AWS) account for this.
 
-- To setup Amazon S3:
-  - Create access credentials from [Identity and Access Management](https://console.aws.amazon.com/iam/home?#users) console
-  - Click on "Create New Users", make sure to enable "Programmatic access"
-  - On permissions, associate **AmazonS3FullAccess**
-  - Store the **user name**, **Access Key ID** and **Secret Access Key** at the end of the process
-  - Create a bucket from the [S3 console](https://console.aws.amazon.com/s3)
-  - Click on "Create a Bucket" and proceed to create a bucket
-  - On permissions, make sure "Block new public ACLs" and "Remove public access" are unchecked (Public access settings)
-  - Store the **bucket name** and the **region**
-  - You don't need to setup logging
+To setup Amazon S3:
+
+- Create access credentials from [Identity and Access Management](https://console.aws.amazon.com/iam/home?#users) console
+  - Click on **Create users** and create a new user
+  - On permissions, click on **Add permissions** and select **Attach policies directly** and associate **AmazonS3FullAccess**
+  - Click on **Create access key** and proceed to create the access key for **Third-party service**
+  - Store the **user name**, **Access Key** and **Secret access key** at the end of the process
+- Create a bucket from the [S3 console](https://console.aws.amazon.com/s3)
+  - Click on **Create bucket** ans select **AWS Region** and **Bucket name** (store these)
+  - On Object Ownership, make sure to select **ACLs enabled** and select **Bucket owner preferred** for the access control list
+  - On Block Public Access *unchecked* **Block all public access** and make sure objects have public access
+  - On Bucker Versioning, make sure to *disable* **Bucket Versioning**
 
 If you want to use a custom domain follow the [CNAME](https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs) documentation. Otherwise just make sure that the [Storage URL](#storage-url) ends with `/<your_bucket_name>/`
 
