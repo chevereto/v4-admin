@@ -86,10 +86,10 @@ To setup Amazon S3:
   - Click on **Create access key** and proceed to create the access key for **Third-party service**
   - Store the **user name**, **Access Key** and **Secret access key** at the end of the process
 - Create a bucket from the [S3 console](https://console.aws.amazon.com/s3)
-  - Click on **Create bucket** ans select **AWS Region** and **Bucket name** (store these)
+  - Click on **Create bucket** and select **AWS Region** and **Bucket name** (store these)
   - On Object Ownership, make sure to select **ACLs enabled** and select **Bucket owner preferred** for the access control list
   - On Block Public Access *unchecked* **Block all public access** and make sure objects have public access
-  - On Bucker Versioning, make sure to *disable* **Bucket Versioning**
+  - On Bucket Versioning, make sure to *disable* **Bucket Versioning**
 
 If you want to use a custom domain follow the [CNAME](https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs) documentation. Otherwise just make sure that the [Storage URL](#storage-url) ends with `/<your_bucket_name>/`
 
