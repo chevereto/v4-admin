@@ -1,4 +1,4 @@
-# 🔌 Login providers
+# Login providers
 
 Chevereto includes support for login providers, enabling your users to sign up by connecting an already existan account in a login provider.
 

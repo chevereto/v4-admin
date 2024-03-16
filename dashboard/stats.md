@@ -2,7 +2,7 @@
 sidebar: false
 ---
 
-# 📈 Stats
+# Stats
 
 `/dashboard`
 

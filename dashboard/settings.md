@@ -2,7 +2,7 @@
 sidebar: false
 ---
 
-# ⚙️ Settings
+# Settings
 
 `/dashboard/settings`
 

@@ -2,7 +2,7 @@
 sidebar: false
 ---
 
-# 🗂 Albums
+# Albums
 
 `/dashboard/albums`
 

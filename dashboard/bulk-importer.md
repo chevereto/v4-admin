@@ -1,4 +1,4 @@
-# 📥 Bulk importer
+# Bulk importer
 
 `/dashboard/bulk-importer`
 

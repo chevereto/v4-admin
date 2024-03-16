@@ -2,7 +2,7 @@
 sidebar: false
 ---
 
-# 😎 Account
+# Account
 
 The account created on install is the **admin account**, which can can be modified. Additional administrators can be also added.
 
