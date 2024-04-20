@@ -1,24 +1,24 @@
-# Image upload
+# File upload
 
-`/dashboard/settings/image-upload`
+`/dashboard/settings/file-upload`
 
-This control the settings related to image uploading.
+This control the settings related to file uploading.
 
-## Enabled image formats
+## Enabled file extensions
 
-Determines which image formats can be uploaded.
+Determines which file formats can be uploaded.
 
 ::: tip ✅ Formats supported
-JPG PNG BMP GIF WEBP
+JPG PNG BMP GIF WEBP MP4 WEBM
 :::
 
 ## Enable uploads
 
-Toggles the image upload functionality.
+Toggles the file upload functionality.
 
 ## Enable uploads (URL)
 
-Toggles the image upload functionality from URL.
+Toggles the file upload functionality from URL.
 
 ## Upload user interface
 
