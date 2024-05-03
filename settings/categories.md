@@ -2,7 +2,7 @@
 
 `/dashboard/settings/categories`
 
-Categories classify the uploaded images and generate listings based in each category.
+Categories classify the uploaded files and generate listings based in each category.
 
 ## Adding categories
 
