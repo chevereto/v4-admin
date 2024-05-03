@@ -1,5 +1,7 @@
 # Semantics
 
+ Semantics allows you to define the nouns used for content to customize your content driven experience.
+
 ## Album
 
 Determines the semantic text used for `Album`.
