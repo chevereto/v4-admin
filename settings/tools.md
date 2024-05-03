@@ -58,7 +58,7 @@ Re-calculate external storage stats for the target storage id.
 | ------- | ------------------------------------------------------ |
 | 1       | Storage "AWS S3 US WEST N.CALI" (1) stats re-generated |
 
-## Migrate image records from one external storage to another
+## Migrate image records
 
 Re-assign image database tables from one storage to another.
 
