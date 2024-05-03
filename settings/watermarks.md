@@ -1,8 +1,20 @@
 # Watermarks
 
-## Watermark select
+## Watermarks toggle
 
-Toggles watermarking on user uploaded content.
+Toggles image watermarking, which are images that are merged in front of the images. Useful for any branding need.
+
+## Watermark user toggles
+
+Select which user uploads will be watermarked.
+
+## Watermark file toggles
+
+Which image formats will be watermarked.
+
+## Minimum image size needed to apply watermark
+
+Determines the minimum image size criteria needed to watermark an image.
 
 ## Watermark image
 
