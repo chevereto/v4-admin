@@ -88,36 +88,36 @@ Toggles debug error reporting. When enabled, Chevereto will display the errors t
 
 Shows the debug level. This value is taken from `CHEVERETO_DEBUG_LEVEL`.
 
-## Enable XR
+## Enable xrDebug
 
-Toggles sending debug messages to XR Debug.
+Toggles sending debug messages to xrDebug.
 
-When enabled, the website will stream dump information to the configured XR Debug server.
+When enabled, the website will stream dump information to the configured xrDebug server.
 
-| Value    | Effect           |
-| -------- | ---------------- |
-| Enabled  | Enable XR Debug  |
-| Disabled | Disable XR Debug |
+| Value    | Effect          |
+| -------- | --------------- |
+| Enabled  | Enable xrDebug  |
+| Disabled | Disable xrDebug |
 
-### XR Debug Host
+### xrDebug Host
 
-Determines the XR Debug host to send dump messages.
+Determines the xrDebug host to send dump messages.
 
 | Type   | Example   |
 | ------ | --------- |
 | String | localhost |
 
-### XR Debug Port
+### xrDebug Port
 
-Determines the XR Debug host port to send dump messages.
+Determines the xrDebug host port to send dump messages.
 
 | Type   | Example |
 | ------ | ------- |
 | String | 27420   |
 
-### XR Debug Private key
+### xrDebug Private key
 
-Determines the XR Debug private key to sign messages.
+Determines the xrDebug private key to sign messages.
 
 | Type   | Example       |
 | ------ | ------------- |
