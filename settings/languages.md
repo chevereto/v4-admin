@@ -36,11 +36,7 @@ When enabled the system will allow users to choose which language they want to u
 
 ## Enabled languages
 
-This sets  This means that for all users this will be the default language used if "Auto language" is turned off.
-
-## Available languages
-
-Select which languages are available to use in your installation. You can selective turn on/off any language.
+Select which languages are available to use in your installation. You can select turn on/off any language.
 
 | Type     | Available                                                                                                                                                                                                                                                                                                                                                       |
 | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
