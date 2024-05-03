@@ -14,6 +14,14 @@ Determines the default palette to use.
 | ------ | ------------------------------- |
 | Select | Use selected palette as default |
 
+## Default font
+
+Determines the default font to use.
+
+| Value  | Effect               |
+| ------ | -------------------- |
+| Select | Font used by default |
+
 ## Image load max. filesize (MB)
 
 Determines the maximum image file size to load. Images bigger than this value will require "click to load" full resolution image.
@@ -76,15 +84,6 @@ Toggles the display of embed codes.
 | -------- | ----------------------------- |
 | Enabled  | Show embed codes              |
 | Disabled | Don't show (hide) embed codes |
-
-## Not safe content checkbox in uploader
-
-Toggles the display of the NSFW checkbox.
-
-| Value    | Effect                           |
-| -------- | -------------------------------- |
-| Enabled  | Enable display of NSFW checkbox  |
-| Disabled | DIsable display of NSFW checkbox |
 
 ## Custom CSS code
 
