@@ -43,6 +43,15 @@ Determines if incoming uploads must be moderated or not.
 | Guest    | Moderate guest uploads |
 | All      | Moderate all uploads   |
 
+## Not safe content checkbox in uploader
+
+Toggles the display of the NSFW checkbox.
+
+| Value    | Effect                           |
+| -------- | -------------------------------- |
+| Enabled  | Enable display of NSFW checkbox  |
+| Disabled | DIsable display of NSFW checkbox |
+
 ## Enable embed codes (uploader)
 
 Toggles the display of embed codes after upload process.
