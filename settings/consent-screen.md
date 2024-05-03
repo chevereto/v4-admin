@@ -4,7 +4,7 @@
 
 ## Enable consent screen
 
-Toggles the use of a consent screen when browsing the website for the first time.
+Toggles the use of a consent screen when browsing the website for the first time. When enabled users must agree to the terms of service before they can continue.
 
 | Value    | Effect                 |
 | -------- | ---------------------- |
@@ -19,4 +19,4 @@ Determines the background image used for the consent screen page.
 
 | Type  | Recommended |
 | ----- | ----------- |
-| Image | < `400KB`   |
+| Image | <`400KB`    |
