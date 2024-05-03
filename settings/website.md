@@ -29,6 +29,15 @@ Search allows users to locate content based on a search query.
 | Enabled  | Enable search  |
 | Disabled | Disable search |
 
+## Search (guests)
+
+Toggles the search functionality (for guests).
+
+| Value    | Effect                    |
+| -------- | ------------------------- |
+| Enabled  | Enable search for guests  |
+| Disabled | Disable search for guests |
+
 ## Explore
 
 Toggles the explore functionality.
@@ -46,10 +55,10 @@ Toggles the explore functionality (for guests).
 
 Same as [explore](#explore), but only affects guests users.
 
-| Value    | Effect                    |
-| -------- | ------------------------- |
-| Enabled  | Enable explore for guest  |
-| Disabled | Disable explore for guest |
+| Value    | Effect                     |
+| -------- | -------------------------- |
+| Enabled  | Enable explore for guests  |
+| Disabled | Disable explore for guests |
 
 ## Random
 
@@ -61,6 +70,15 @@ Random allows to randomly show a public image. It enables `?random` to fetch a r
 | -------- | --------------------- |
 | Enabled  | Enable random button  |
 | Disabled | Disable random button |
+
+## Random (guests)
+
+Toggles the random functionality (for guests).
+
+| Value    | Effect                           |
+| -------- | -------------------------------- |
+| Enabled  | Enable random button for guests  |
+| Disabled | Disable random button for guests |
 
 ## Powered by Chevereto
 
@@ -99,10 +117,10 @@ Followers allow users to follow each other. It also enables the "following" list
 
 Determines the website mode. It will affect how your installation works.
 
-| Value     | Effect                                          |
-| --------- | ----------------------------------------------- |
-| Community | A community-like website with users interacting |
-| Personal  | A single-user experience                        |
+| Value          | Effect                                          |
+| -------------- | ----------------------------------------------- |
+| Multi-user     | A community-like website with users interacting |
+| Single profile | A single-user experience                        |
 
 ## Website privacy mode
 
