@@ -12,4 +12,4 @@ Determines the API V1 key.
 
 💡 This API key enables to use API V1 as guest user. The key is stored in plain text.
 
-User API keys at `/settings/api` aren't stored.
+**Note:** User API keys at `/settings/api` aren't stored.
