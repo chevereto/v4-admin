@@ -37,7 +37,7 @@ Determines how images will be fitted in listings.
 | Fixed | Tiled listing display, fixed width and height |
 | Fluid | Masonry listing display, automatic height     |
 
-## Album listing images requirement (explore)
+## Album listing requirement (explore)
 
 Determine the album image count required to show the album in listings.
 
