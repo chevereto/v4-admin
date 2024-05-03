@@ -20,15 +20,6 @@ Toggles the blurring of NSFW content in listings.
 | Enabled  | A blur filter is implemented on the image, requires mouse over to see the image without filtering |
 | Disabled | Disable blur filtering for NSFW images                                                            |
 
-## Show banners in not safe content
-
-Toggles the display of banners in NSFW content.
-
-| Value    | Effect                       |
-| -------- | ---------------------------- |
-| Enabled  | Hide banners in NSFW content |
-| Disabled | Show banners in NSFW content |
-
 ## Show not safe content in random mode
 
 Toggles the display of NSFW content in randomized image fetching (`?random`).
@@ -37,6 +28,15 @@ Toggles the display of NSFW content in randomized image fetching (`?random`).
 | -------- | ---------------------------------------- |
 | Enabled  | Allows NSFW content to appear on random  |
 | Disabled | Disable NSFW content to appear on random |
+
+## Show banners in not safe content
+
+Toggles the display of banners in NSFW content.
+
+| Value    | Effect                       |
+| -------- | ---------------------------- |
+| Enabled  | Hide banners in NSFW content |
+| Disabled | Show banners in NSFW content |
 
 ## Lock NSFW editing
 
@@ -49,7 +49,7 @@ Toggles the NSFW editing.
 
 ## Stop words
 
-Define words that won't be allowed for content. One sentence per line, supports regex.
+Define words that won't be allowed for content. One sentence per line, it supports regex.
 
 | Value     | Effect                                       |
 | --------- | -------------------------------------------- |
