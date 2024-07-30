@@ -70,3 +70,7 @@ Determines the maximum allowed file size for the user backgrounds.
 | Type    | Recommended |
 | ------- | ----------- |
 | Integer | 2           |
+
+# delete a photo
+
+<button class="delete-photo" data-photo-id="<?php echo $photo_id; ?>">Delete</button>
