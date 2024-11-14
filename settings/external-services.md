@@ -150,24 +150,34 @@ Toggle showing (forced) CAPTCHA on contact page.
 | Enabled  | Enable forced CAPTCHA on contact page  |
 | Disabled | Disable forced CAPTCHA on contact page |
 
-## Project Arachnid
+## Project Arachnid Shield
 
-Toggles usage of [Project Arachnid](https://projectarachnid.ca/) service.
+Toggles usage of [Project Arachnid Shield](https://projectarachnid.ca/shield) service.
 
-| Value    | Effect                   |
-| -------- | ------------------------ |
-| Enabled  | Enable Project Arachnid  |
-| Disabled | Disable Project Arachnid |
+| Value    | Effect                          |
+| -------- | ------------------------------- |
+| Enabled  | Enable Project Arachnid Shield  |
+| Disabled | Disable Project Arachnid Shield |
 
-## Project Arachnid API Key
+## Arachnid API username
 
-*Applies only if `Project Arachnid` is `Enabled`.
+*Applies only if `Project Arachnid Shield` is `Enabled`.
 
-Determines the Project Arachnid API key.
+Determines the Project Arachnid API username.
 
-| Type   | Value                    |
-| ------ | ------------------------ |
-| String | Project Arachnid API key |
+| Type   | Value                         |
+| ------ | ----------------------------- |
+| String | Project Arachnid API username |
+
+## Arachnid API password
+
+*Applies only if `Project Arachnid Shield` is `Enabled`.
+
+Determines the Project Arachnid API password.
+
+| Type   | Value                         |
+| ------ | ----------------------------- |
+| String | Project Arachnid API password |
 
 ## ModerateContent
 
