@@ -2,6 +2,15 @@
 
 `/dashboard/settings/consent-screen`
 
+## User profile view
+
+Determine the default view for user profile.
+
+| Value  | Effect               |
+| ------ | -------------------- |
+| Files  | Show files (default) |
+| Albums | Show albums          |
+
 ## Enable signups
 
 Toggles the ability to signup to your website.
