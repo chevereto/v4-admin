@@ -1,6 +1,6 @@
-# External storage
+# Upload storage
 
-External storage allows to use external servers for storing user uploads, which helps to leverage your server load and deliver a more reliable website. If you use multiple external storage servers, it will help to distribute the traffic of these assets.
+Upload storage allows to use more endpoints for storing user uploads, which helps to leverage your server load and deliver a more reliable website. If you use multiple upload storage servers, it will help to distribute the traffic of these assets.
 
 ::: tip 💡 Asset storage
 Check the documentation on [Asset variables](https://v4-docs.chevereto.com/application/configuration/environment.html#assets-variables) if you want to control where to store the website assets (backgrounds, avatars, etc.)
@@ -8,13 +8,13 @@ Check the documentation on [Asset variables](https://v4-docs.chevereto.com/appli
 
 ## How it works?
 
-External storage works by adding external storage server(s) where file uploads will be stored. These external storage servers expose those files using HTTP, enabling users and visitors of your Chevereto installation to access these images directly.
+Upload storage works by adding upload storage server(s) where file uploads will be stored. These upload storage servers expose those files using HTTP, enabling users and visitors of your Chevereto installation to access these images directly.
 
 ## Storage URL
 
 💡 The storage server must provide the URL for public-read file access. Check the documentation of your service provider.
 
-Chevereto maps external storage uploads to the corresponding external storage server using the given Storage URL as a base URL to locate that file in the external storage.
+Chevereto maps upload storage uploads to the corresponding upload storage server using the given Storage URL as a base URL to locate that file in the upload storage.
 
 Using Amazon S3 with direct storage:
 
@@ -148,7 +148,7 @@ To setup Google Cloud Storage:
 
 ### Local
 
-The [Local API](../settings/external-storage.md#local) allows to upload images to any filesystem path in the server.
+The [Local API](../settings/upload-storage.md#local) allows to upload images to any filesystem path in the server.
 
 ### Microsoft Azure
 
@@ -156,7 +156,7 @@ The Microsoft Azure API allows to upload images to [Microsoft Azure Storage](htt
 
 ### OpenStack
 
-The [OpenStack API](../settings/external-storage.md#openstack) allows to upload images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
+The [OpenStack API](../settings/upload-storage.md#openstack) allows to upload images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
 
 - OpenStack configuration for RunAbove:
   - Identity URL: <https://auth.Runabove.io/v2.0>

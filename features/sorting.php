@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'external-storage.md',
+    'upload-storage.md',
     'social-login.md',
 ];

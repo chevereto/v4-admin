@@ -1,6 +1,6 @@
-# External storage
+# Upload storage
 
-`/dashboard/settings/external-storage`
+`/dashboard/settings/upload-storage`
 
 ## Adding storages
 

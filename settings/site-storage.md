@@ -1,6 +1,6 @@
-# Asset storage
+# Site storage
 
-`/dashboard/settings/asset-storage`
+`/dashboard/settings/site-storage`
 
 ## Storage values (common)
 

@@ -17,7 +17,7 @@ return [
     'homepage.md',
     'pages.md',
     'routing.md',
-    'external-storage.md',
+    'upload-storage.md',
     'login-providers.md',
     'upload-plugin.md',
     'cookie-compliance.md',
