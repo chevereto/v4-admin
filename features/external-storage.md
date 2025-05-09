@@ -174,16 +174,31 @@ The S3 Compatible API allows to upload images to any server implementing the Ama
 
 Some providers supporting S3 API are:
 
-- Vultr Object Storage (use region `us-east-1`)
-- Ceph
+- Backblaze B2 (via S3-compatible API)
+- Cloudflare R2
 - DigitalOcean Spaces
-- Dreamhost Cloud Storage
+- DreamHost DreamObjects
+- Hetzner Storage Boxes (via MinIO, partial S3 support)
 - IBM COS S3
-- Minio
-- Scaleway
+- IDrive® e2
+- Linode Object Storage (now Akamai)
+- OVH Cloud Object Storage
+- PhoenixNAP Object Storage
+- Scaleway Object Storage
 - StackPath
+- Storj (S3 Gateway access via third-party or hosted integration)
 - Tencent Cloud Object Storage (COS)
+- Vultr Object Storage (use region `us-east-1`)
 - Wasabi
+
+Self-hosted S3-compatible solutions:
+
+- MinIO
+- Ceph (RGW)
+- SeaweedFS (S3 Gateway)
+- Zenko (by Scality)
+- LeoFS (S3 support in gateway mode)
+- Garage (Deuxfleurs)
 
 ### SFTP
 
