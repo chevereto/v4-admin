@@ -178,15 +178,14 @@ Some providers supporting S3 API are:
 - Cloudflare R2
 - DigitalOcean Spaces
 - DreamHost DreamObjects
-- Hetzner Storage Boxes (via MinIO, partial S3 support)
+- Hetzner Object Storage
 - IBM COS S3
 - IDrive® e2
 - Linode Object Storage (now Akamai)
 - OVH Cloud Object Storage
 - PhoenixNAP Object Storage
 - Scaleway Object Storage
-- StackPath
-- Storj (S3 Gateway access via third-party or hosted integration)
+- Storj
 - Tencent Cloud Object Storage (COS)
 - Vultr Object Storage (use region `us-east-1`)
 - Wasabi
