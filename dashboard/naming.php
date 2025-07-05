@@ -1,6 +1,6 @@
 <?php
 
-return [
+
     'stats.md' => 'Stats',
     'images.md' => 'Images',
     'albums.md' => 'Albums',
