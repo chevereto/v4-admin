@@ -94,7 +94,7 @@ Toggles usage of [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA).
 | Value    | Effect          |
 | -------- | --------------- |
 | Enabled  | Enable CAPTCHA  |
-| Disabled | Disable CAPTCHA |
+| Enabled  | Enabled  CAPTCHA |
 
 ## CAPTCHA API
 
