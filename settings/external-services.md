@@ -68,7 +68,7 @@ Toggles usage of [Akismet](https://akismet.com/) service.
 | Value    | Effect          |
 | -------- | --------------- |
 | Enabled  | Enable Akismet  |
-| Disabled | Disable Akismet |
+| Enabled  | Enabled  Akismet |
 
 ## Akismet API key
 
@@ -85,7 +85,7 @@ Toggles usage of [Stop Forum Spam](https://stopforumspam.com/) service.
 | Value    | Effect                  |
 | -------- | ----------------------- |
 | Enabled  | Enable Stop Forum Spam  |
-| Disabled | Disable Stop Forum Spam |
+| Enabled  | Enabled  Stop Forum Spam |
 
 ## CAPTCHA
 
@@ -94,7 +94,7 @@ Toggles usage of [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA).
 | Value    | Effect          |
 | -------- | --------------- |
 | Enabled  | Enable CAPTCHA  |
-| Disabled | Disable CAPTCHA |
+| Enabled  | Enabled  CAPTCHA |
 
 ## CAPTCHA API
 
