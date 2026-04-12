@@ -2,7 +2,7 @@
 
 return [
     'home.md' => 'Home',
-    'images.md' => 'Images',
+    'files.md' => 'Files',
     'albums.md' => 'Albums',
     'users.md' => 'Users',
     'bulk-importer.md' => 'Bulk importer',

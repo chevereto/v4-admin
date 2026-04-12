@@ -2,7 +2,7 @@
 
 return [
     'home.md',
-    'images.md',
+    'files.md',
     'albums.md',
     'users.md',
     'bulk-importer.md',
