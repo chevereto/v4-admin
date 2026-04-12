@@ -1,15 +1,5 @@
 # Guest API
 
-`/dashboard/settings/guest-api`
-
-## Public API key
-
-Determines the API V1 key.
-
-| Type   | Accepted |
-| ------ | -------- |
-| String | Any      |
-
-💡 This API key enables to use API V1 as guest user. The key is stored in plain text.
-
-**Note:** User API keys at `/settings/api` aren't stored.
+::: warning Deprecated
+This page is deprecated. The `/dashboard/settings/guest-api` route no longer exists. Guest API settings (including the Public API key) have been merged into [API settings](./api.md) at `/dashboard/settings/api`.
+:::

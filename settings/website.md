@@ -122,6 +122,26 @@ Determines the website mode. It will affect how your installation works.
 | Multi-user     | A community-like website with users interacting |
 | Single profile | A single-user experience                        |
 
+## Single profile target user
+
+*Applies only if `Website mode` is set to `Single profile`.
+
+Determines the numeric ID of the target user for single profile mode.
+
+| Type    | Example |
+| ------- | ------- |
+| Integer | `1`     |
+
+## Single profile routing
+
+*Applies only if `Website mode` is set to `Single profile`.
+
+Determines a custom route to map `/username` to another path. Use `/` to map directly to the homepage.
+
+| Type   | Example |
+| ------ | ------- |
+| String | `/`     |
+
 ## Website privacy mode
 
 Determines the website privacy mode.

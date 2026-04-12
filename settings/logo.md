@@ -1,5 +1,7 @@
 # Logo
 
+`/dashboard/settings/logo`
+
 ## Logo select
 
 Determines the logo option to use.

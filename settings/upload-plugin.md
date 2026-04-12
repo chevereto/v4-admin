@@ -1,5 +1,7 @@
 # Upload plugin
 
+`/dashboard/settings/upload-plugin`
+
 ## Plugin route
 
 Toggles the availability of the `/plugin` route.

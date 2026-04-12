@@ -2,7 +2,16 @@
 
 `/dashboard/settings/flood-protection`
 
-Flood protection is enabled by default and is highly encouraged to enable it in your website.
+Flood protection is highly encouraged to enable on your website.
+
+## Flood protection toggle
+
+Toggles flood protection globally.
+
+| Value    | Effect                   |
+| -------- | ------------------------ |
+| Enabled  | Enable flood protection  |
+| Disabled | Disable flood protection |
 
 ## Notify to email
 
@@ -47,7 +56,7 @@ Determines the maximum image uploads per week.
 
 ## Monthly limit
 
-Determines the maximum image uploads per minute.
+Determines the maximum image uploads per month.
 
 | Type    | Recommended |
 | ------- | ----------- |

@@ -18,6 +18,14 @@ Determines the image routing.
 | ------ | ------------ |
 | String | `image`, `i` |
 
+## Video routing
+
+Determines the video routing.
+
+| Type   | Examples       |
+| ------ | -------------- |
+| String | `video`, `v`   |
+
 ## Album routing
 
 Determines the album routing.
@@ -35,6 +43,7 @@ Determine which content to resolve on root route.
 | User  | Root resolves to user `/user`   |
 | Album | Root resolves to album `/album` |
 | Image | Root resolves to image `/image` |
+| Video | Root resolves to video `/video` |
 
 ## SEO image URLs
 

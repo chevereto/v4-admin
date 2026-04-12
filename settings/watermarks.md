@@ -1,5 +1,7 @@
 # Watermarks
 
+`/dashboard/settings/watermarks`
+
 ## Watermarks toggle
 
 Toggles image watermarking, which are images that are merged in front of the images. Useful for any branding need.

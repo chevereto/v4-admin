@@ -35,8 +35,8 @@ Toggles the display of banners in NSFW content.
 
 | Value    | Effect                       |
 | -------- | ---------------------------- |
-| Enabled  | Hide banners in NSFW content |
-| Disabled | Show banners in NSFW content |
+| Enabled  | Show banners in NSFW content |
+| Disabled | Hide banners in NSFW content |
 
 ## Lock NSFW editing
 

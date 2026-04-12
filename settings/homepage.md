@@ -47,9 +47,9 @@ Determines the paragraph shown in homepage.
 
 Determines the color for the homepage call to action button.
 
-| Type   | Options                                               |
-| ------ | ----------------------------------------------------- |
-| String | Blue, Green, Orange, Red, Grey, Black, White, Default |
+| Type   | Options                                                       |
+| ------ | ------------------------------------------------------------- |
+| String | Accent, Blue, Green, Orange, Red, Grey, Black, White, Default |
 
 ## Call to action outline style button
 

@@ -2,6 +2,14 @@
 
 `/dashboard/settings/system`
 
+## Cache time seconds
+
+Determines the cache TTL (time to live) in seconds. Use zero (`0`) to disable caching.
+
+| Type    | Default |
+| ------- | ------- |
+| Integer | 0       |
+
 ## Automatic updates check
 
 Toggles the automatic updates check. When enabled, your installation will automatically check for new updates.
@@ -86,4 +94,15 @@ Toggles debug error reporting. When enabled, Chevereto will display the errors t
 
 ## Debug level
 
-Shows the debug level. This value is taken from `CHEVERETO_DEBUG_LEVEL`.
+Determines the debug level for error reporting.
+
+| Value                            | Effect                                         |
+| -------------------------------- | ---------------------------------------------- |
+| None                             | No debug output                                |
+| Error log                        | Log errors to the server error log             |
+| Print errors without error log   | Display errors on screen without logging       |
+| Print and log errors             | Display errors on screen and log them          |
+
+## Enable xrDebug
+
+Toggles integration with [xrDebug](https://xrdebug.com/) for sending debug messages to an xrDebug server. Refer to the documentation for setup instructions.

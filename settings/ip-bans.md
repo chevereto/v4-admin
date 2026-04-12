@@ -28,7 +28,7 @@ Determines the expiration date for the IP ban.
 
 ### Description
 
-A brief description about the category. It will be used in the `<meta name="description">` tag for the category page.
+A brief description about the IP ban (e.g. the reason for the ban).
 
 | Type   | Accepted |
 | ------ | -------- |

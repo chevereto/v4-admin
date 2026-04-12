@@ -1,6 +1,6 @@
-# File upload
+# File uploads
 
-`/dashboard/settings/file-upload`
+`/dashboard/settings/file-uploads`
 
 This control the settings related to file uploading.
 
@@ -9,7 +9,7 @@ This control the settings related to file uploading.
 Determines which file formats can be uploaded.
 
 ::: tip ✅ Formats supported
-JPG JPEG PNG BMP GIF WEBP MOV MP4 WEBM
+AVIF JPG JPEG PNG BMP GIF WEBP MOV MP4 WEBM
 :::
 
 ## Enable uploads
@@ -32,6 +32,15 @@ Determines how the upload will be displayed.
 ## Guest uploads
 
 Same as [enable uploads](#enable-uploads), but for guest users.
+
+## Guest albums
+
+Toggles the ability for guest users to create albums.
+
+| Value    | Effect                             |
+| -------- | ---------------------------------- |
+| Enabled  | Enable album creation for guests   |
+| Disabled | Disable album creation for guests  |
 
 ## Moderate uploads
 
@@ -134,7 +143,7 @@ How uploads will be named on upload.
 
 ## Thumb size
 
-The with and height for the image thumbs.
+The width and height for the image thumbs.
 
 ## Medium image fixed dimension
 

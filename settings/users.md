@@ -1,6 +1,6 @@
 # Users
 
-`/dashboard/settings/consent-screen`
+`/dashboard/settings/users`
 
 ## User profile view
 

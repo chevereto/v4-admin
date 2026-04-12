@@ -1,6 +1,8 @@
 # Semantics
 
- Semantics allows you to define the nouns used for content to customize your content driven experience.
+`/dashboard/settings/semantics`
+
+Semantics allows you to define the nouns used for content to customize your content driven experience.
 
 ## Album
 
@@ -17,6 +19,30 @@ Determines the semantic text used for `Image`.
 ## Images
 
 Determines the semantic text used for `Images`.
+
+## Video
+
+Determines the semantic text used for `Video`.
+
+## Videos
+
+Determines the semantic text used for `Videos`.
+
+## File
+
+Determines the semantic text used for `File`.
+
+## Files
+
+Determines the semantic text used for `Files`.
+
+## Tag
+
+Determines the semantic text used for `Tag`.
+
+## Tags
+
+Determines the semantic text used for `Tags`.
 
 ## User
 
