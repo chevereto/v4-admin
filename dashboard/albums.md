@@ -8,8 +8,6 @@ At **Dashboard Albums** you can administer all the albums created in the system.
 
 Albums are displayed as a responsive grid. Each card shows the album cover image (or a placeholder when the album has no files), the album name, and the file count. Share and like buttons are visible on each card.
 
-The listing supports pagination and loads additional albums as you scroll or use the **Load more** button.
-
 ## Sorting
 
 Use the sort menu next to the **Albums** heading to change the order of the listing.

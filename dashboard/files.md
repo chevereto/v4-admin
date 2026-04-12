@@ -8,8 +8,6 @@ At **Dashboard Files** you can administer all the files uploaded to the system. 
 
 Files are displayed as a responsive image grid. Each item shows inline controls on hover: a delete button, a flag button, and a checkbox for selection.
 
-The listing supports pagination and loads additional files as you scroll or use the **Load more** button.
-
 ## Sorting
 
 Use the sort menu next to the **Files** heading to change the order of the listing.
@@ -25,11 +23,11 @@ Use the sort menu next to the **Files** heading to change the order of the listi
 
 Each file in the grid exposes the following controls on hover:
 
-| Control  | Description                                             |
-| -------- | ------------------------------------------------------- |
-| 🗑️ Delete | Removes the file permanently (confirmation required)    |
-| 🚩 Flag   | Marks the file as safe or unsafe for content moderation |
-| ☐ Select | Adds the file to the current selection for bulk actions |
+| Control | Description                                             |
+| ------- | ------------------------------------------------------- |
+| Delete  | Removes the file permanently (confirmation required)    |
+| Flag    | Marks the file as safe or unsafe for content moderation |
+| Select  | Adds the file to the current selection for bulk actions |
 
 ## Bulk selection
 
