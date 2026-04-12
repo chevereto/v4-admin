@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'stats.md' => 'Stats',
+    'home.md' => 'Home',
     'images.md' => 'Images',
     'albums.md' => 'Albums',
     'users.md' => 'Users',
