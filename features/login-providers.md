@@ -1,10 +1,10 @@
 # Login providers
 
-Chevereto includes support for login providers, enabling your users to sign up by connecting an already existan account in a login provider.
+Login providers let your users sign in or register using an existing account from a third-party service such as Google, GitHub, or Apple.
 
 ## Supported providers
 
-Table below contains all the supported providers and the handle used for it.
+The table below lists all supported providers and the handle used to identify each one in callback URLs.
 
 | Provider      | Handle        |
 | ------------- | ------------- |
@@ -41,16 +41,16 @@ Table below contains all the supported providers and the handle used for it.
 
 ## Create an app
 
-👉 Refer to your login provider developer documentation in order to setup your application.
+Each provider requires you to register an application in their developer portal before Chevereto can use it. Refer to the provider's developer documentation for setup instructions.
 
-To configure a login provider you will require to create an application at the target provider. The connect/return URL you need to use is:
+When configuring the application, set the callback (redirect) URL to:
 
 ```plain
 https://yourwebsite.com/connect/HANDLE/
 ```
 
-Where `HANDLE` is the provider handle from the [supported providers](#supported-providers) table.
+Replace `HANDLE` with the provider's handle from the [supported providers](#supported-providers) table. For example, for Google the URL would be `https://yourwebsite.com/connect/google/`.
 
 ## Provide app credentials
 
-Enter the application credentials at [Settings > Login providers](../settings/login-providers.md).
+Once the application is created, enter the credentials it provides at [Settings > Login providers](../settings/login-providers.md).
