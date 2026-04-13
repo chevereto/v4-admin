@@ -3,16 +3,16 @@ home: true
 heroImage: /logo.svg
 heroText: V4 Admin Manual
 tagline: Documentation for administrators of Chevereto V4 based systems
-actionText: Admin account →
+actionText: Get started →
 actionLink: /account/
 footer: The Chevereto V4 admin manual
 ---
 
-# 👸 Admin Manual
+# Admin Manual
 
-Welcome to the Chevereto V4 Admin Manual. This documentation contains all what's need to know about administrating a Chevereto-based system.
+Welcome to the Chevereto V4 Admin Manual. This documentation covers everything you need to know about administrating a Chevereto-based system.
 
-Not an admin? You can check the [Chevereto V4 user's manual](https://v4-user.chevereto.com/).
+Not an admin? Check the [Chevereto V4 user manual](https://v4-user.chevereto.com/).
 
 ## Links
 
