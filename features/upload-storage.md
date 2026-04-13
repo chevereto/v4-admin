@@ -1,22 +1,22 @@
 # Upload storage
 
-Upload storage allows to use more endpoints for storing user uploads, which helps to leverage your server load and deliver a more reliable website. If you use multiple upload storage servers, it will help to distribute the traffic of these assets.
+Upload storage lets you offload user-uploaded files to one or more external servers. This reduces the load on your origin server, improves reliability, and makes it easier to scale traffic for uploaded assets.
 
-::: tip 💡 Asset storage
-Check the documentation on [Asset variables](https://v4-docs.chevereto.com/application/configuration/environment.html#assets-variables) if you want to control where to store the website assets (backgrounds, avatars, etc.)
+::: tip Asset storage
+Check the [Site storage](../settings/site-storage.md) documentation to control where website assets (backgrounds, avatars, etc.) are stored.
 :::
 
-## How it works?
+## How it works
 
-Upload storage works by adding upload storage server(s) where file uploads will be stored. These upload storage servers expose those files using HTTP, enabling users and visitors of your Chevereto installation to access these images directly.
+Upload storage works by routing file uploads to a configured external server. That server exposes the files over HTTP, so users and visitors can access uploaded images directly without hitting your origin.
 
 ## Storage URL
 
-💡 The storage server must provide the URL for public-read file access. Check the documentation of your service provider.
+The storage server must provide a publicly accessible URL for reading files. Check your service provider's documentation for the correct URL format.
 
-Chevereto maps upload storage uploads to the corresponding upload storage server using the given Storage URL as a base URL to locate that file in the upload storage.
+Chevereto uses the Storage URL as a base URL to map stored files to their public location.
 
-Using Amazon S3 with direct storage:
+**Amazon S3 with direct storage:**
 
 | Property     | Value                                        |
 | ------------ | -------------------------------------------- |
@@ -25,11 +25,11 @@ Using Amazon S3 with direct storage:
 | Stored image | my-bucket/image.jpg                          |
 | Mapped URL   | https://s3.amazonaws.com/my-bucket/image.jpg |
 
-::: warning CNAME
-Is recommended that you use URLs that match your domain so try to take advantage of using a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
+::: warning Use a CNAME
+It is recommended to use a URL that matches your own domain. Take advantage of a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record) to avoid exposing your storage provider's domain directly.
 :::
 
-Amazon S3 with folder-based storage and custom CNAME (`img.domain.com`):
+**Amazon S3 with folder-based storage and custom CNAME (`img.domain.com`):**
 
 | Property     | Value                                                 |
 | ------------ | ----------------------------------------------------- |
@@ -40,82 +40,84 @@ Amazon S3 with folder-based storage and custom CNAME (`img.domain.com`):
 
 ## Storage URL with CDN
 
-Add a CDN for each storage URL you want to use. At your CDN provider create a pull zone for the origin storage URL.
+To use a CDN, create a pull zone at your CDN provider pointing to the origin Storage URL.
 
-If you are using Amazon S3, the source (origin) URL will be something like this:
+For Amazon S3, the origin URL looks like:
 
-```sh
+```text
 https://s3.amazonaws.com/my-bucket/
 ```
 
-The CDN URL provided by your CDN service will be something like this:
+Your CDN will provide a URL such as:
 
-```sh
+```text
 https://pullzone-url.at.cdn-service.com/
 ```
 
-Adding a CNAME record for the above URL will allow you to end up with a Storage URL like this:
+Adding a CNAME record for the CDN URL lets you use a custom Storage URL like:
 
-```sh
+```text
 https://s3-cdn.domain.com/
 ```
 
 ## Lifecycle settings
 
-::: danger
-Providers of cloud storage may use a feature called "lifecycle" for the files stored there. Make sure to edit the storage provider configuration to don't use this feature.
-:::
+::: danger Disable lifecycle policies
+Some cloud storage providers offer a "lifecycle" feature that retains copies of all file states (modified, deleted, etc.). This can significantly increase your storage costs.
 
-When enabled, the storage provider will keep copies of all the states of the files (modified, deleted, etc.) which may seriously increase your storage costs. We highly recommend to always disable this kind of settings, when asked select to **keep only the last version of the file**.
+Always disable lifecycle policies on your storage bucket. If prompted, select **keep only the last version of the file**.
+:::
 
 ## Providers
 
 ### Alibaba Cloud OSS
 
-The Alibaba Cloud OSS API allows to upload images to [Alibaba Cloud (Aliyun) Object Storage System (OSS)](https://www.alibabacloud.com/product/oss/).
+The Alibaba Cloud OSS API uploads images to [Alibaba Cloud (Aliyun) Object Storage System (OSS)](https://www.alibabacloud.com/product/oss/).
 
 ### Amazon S3
 
-The Amazon S3 API allows to upload images to an [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3) bucket. You will need an [Amazon Web Services](https://aws.amazon.com/) (AWS) account for this.
+The Amazon S3 API uploads images to an [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3) bucket. An [Amazon Web Services](https://aws.amazon.com/) (AWS) account is required.
 
-To setup Amazon S3:
+**Setup steps:**
 
-- Create access credentials from [Identity and Access Management](https://console.aws.amazon.com/iam/home?#users) console
-  - Click on **Create users** and create a new user
-  - On permissions, click on **Add permissions** and select **Attach policies directly** and associate **AmazonS3FullAccess**
-  - Click on **Create access key** and proceed to create the access key for **Third-party service**
-  - Store the **user name**, **Access Key** and **Secret access key** at the end of the process
-- Create a bucket from the [S3 console](https://console.aws.amazon.com/s3)
-  - Click on **Create bucket** and select **AWS Region** and **Bucket name** (store these)
-  - On Object Ownership, make sure to select **ACLs enabled** and select **Bucket owner preferred** for the access control list
-  - On Block Public Access make sure to leave *unchecked* **Block all public access** and make sure objects have public access
-  - On Bucket Versioning, make sure to *disable* **Bucket Versioning**
+1. Create access credentials in the [IAM console](https://console.aws.amazon.com/iam/home?#users):
+   - Click **Create users** and create a new user
+   - Under permissions, click **Add permissions**, select **Attach policies directly**, and attach **AmazonS3FullAccess**
+   - Click **Create access key** and select **Third-party service**
+   - Save the **username**, **Access Key**, and **Secret Access Key**
 
-If you want to use a custom domain follow the [CNAME](https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs) documentation. Otherwise just make sure that the [Storage URL](#storage-url) ends with `/<your_bucket_name>/`
+2. Create a bucket in the [S3 console](https://console.aws.amazon.com/s3):
+   - Click **Create bucket**, then choose an **AWS Region** and **Bucket name** (save both)
+   - Under Object Ownership, select **ACLs enabled** and **Bucket owner preferred**
+   - Under Block Public Access, leave **Block all public access** unchecked so objects are publicly accessible
+   - Under Bucket Versioning, select **Disable**
+
+To use a custom domain, follow the AWS [CNAME documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs). Otherwise, ensure the [Storage URL](#storage-url) ends with `/<your_bucket_name>/`.
 
 ### Backblaze B2
 
-The Backblaze B2 API allows to upload images to [Backblaze's cloud storage system](https://www.backblaze.com/b2/cloud-storage.html).
+The Backblaze B2 API uploads images to [Backblaze's cloud storage](https://www.backblaze.com/b2/cloud-storage.html).
 
-1. Go to **B2 Cloud Storage** and click on **Create a Bucket**
-2. Files in Bucket are: **Public**
-3. Go to **App Keys** and click on **Add a New Application Key**
-   1. Type of Access: **Read and Write**
-4. When done, use the following reference:
+**Setup steps:**
 
-Select **S3 Compatible** storage API for **B2 S3 Storage** (current offering):
+1. Go to **B2 Cloud Storage** and click **Create a Bucket**
+2. Set **Files in Bucket** to **Public**
+3. Go to **App Keys** and click **Add a New Application Key**
+   - Type of Access: **Read and Write**
 
-| B2 Value       | Chevereto Storage                              |
-| -------------- | ---------------------------------------------- |
-| Region         | `us-west-002` (take note from your Endpoint)   |
-| keyID          | Storage key                                    |
-| applicationKey | Storage secret                                 |
-| Endpoint*      | https://s3.us-west-002.backblazeb2.com         |
-| URL            | https://f002.backblazeb2.com/file/your_bucket/ |
+**B2 S3 Storage** (current offering) — select the **S3 Compatible** storage API:
 
-> (*) You will find the endpoint under the bucket details.
+| B2 Value       | Chevereto Storage                                |
+| -------------- | ------------------------------------------------ |
+| Region         | `us-west-002` (from your Endpoint URL)           |
+| keyID          | Storage key                                      |
+| applicationKey | Storage secret                                   |
+| Endpoint*      | `https://s3.us-west-002.backblazeb2.com`         |
+| URL            | `https://f002.backblazeb2.com/file/your_bucket/` |
 
-Select **Backblaze B2** storage API for legacy **B2 Storage**:
+> (*) The endpoint is shown in the bucket details page.
+
+**Legacy B2 Storage** — select the **Backblaze B2** storage API:
 
 | B2 Value       | Chevereto Storage                       |
 | -------------- | --------------------------------------- |
@@ -124,56 +126,53 @@ Select **Backblaze B2** storage API for legacy **B2 Storage**:
 
 ### FTP
 
-The FTP API allows to upload images to a server implementing the [File Transfer Protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
+The FTP API uploads images to any server implementing the [File Transfer Protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
 
 ### Google Cloud
 
-The Google Cloud API allows to upload images to a Google Cloud Storage bucket. You will need a [Google Cloud](https://cloud.google.com/) service account and [activate cloud storage](https://cloud.google.com/storage/docs/signup) for this.
+The Google Cloud API uploads images to a Google Cloud Storage bucket. A [Google Cloud](https://cloud.google.com/) service account with [Cloud Storage enabled](https://cloud.google.com/storage/docs/signup) is required.
 
-To setup Google Cloud Storage:
+**Setup steps:**
 
-- Create a project
-- Go to **APIs & services** dashboard and make sure that **Google Cloud Storage JSON API** is enabled.
-  - If is not enabled click on **Enable API and Services** and enable Google Cloud Storage JSON API
-- Go to **Cloud Storage** then click on **Browser**
-- Create a bucket by clicking **Create bucket** button. Make sure to:
-  - Prevent public access: Unselect **Enforce public access prevention on this bucket** as you want public access for the bucket
-  - Access control: Fine-grained
-- Go to **Credentials** under APIs & services, click on **Create credentials** then click on **Service account**. Make sure to use the following settings:
-  - Grant access: Role owner
-  - Key type: JSON
-- When done, go to your newly created service account under **Service Accounts**
-- Go yo **keys** and create a new **JSON key**
-- Your browser will start to download the JSON key file, the contents of the file is what you need to paste on Chevereto's **Secret Key** textarea
+1. Create a project in Google Cloud
+2. Go to **APIs & Services** and confirm that **Google Cloud Storage JSON API** is enabled. If not, click **Enable APIs and Services** and enable it
+3. Go to **Cloud Storage** > **Browser** and click **Create bucket**:
+   - Uncheck **Enforce public access prevention on this bucket**
+   - Set Access control to **Fine-grained**
+4. Go to **APIs & Services** > **Credentials**, click **Create credentials**, then **Service account**:
+   - Grant role: **Owner**
+   - Key type: **JSON**
+5. Open your new service account under **Service Accounts**, go to **Keys**, and create a new **JSON key**
+6. Your browser will download a JSON file — paste its entire contents into Chevereto's **Secret Key** field
 
 ### Local
 
-The [Local API](../settings/upload-storage.md#local) allows to upload images to any filesystem path in the server.
+The [Local API](../settings/upload-storage.md#local) uploads images to any filesystem path on the server.
 
 ### Microsoft Azure
 
-The Microsoft Azure API allows to upload images to [Microsoft Azure Storage](https://azure.microsoft.com/services/storage/).
+The Microsoft Azure API uploads images to [Microsoft Azure Storage](https://azure.microsoft.com/services/storage/).
 
 ### OpenStack
 
-The [OpenStack API](../settings/upload-storage.md#openstack) allows to upload images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
+The [OpenStack API](../settings/upload-storage.md#openstack) uploads images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
 
-OpenStack configuration for RunAbove:
-
-- Identity URL: <https://auth.Runabove.io/v2.0>
-- Username: Your RunAbove username
-- Password: Your RunAbove password
-- Region: `SBG-1` or `BHS-1` This is the data center where your container was created
-- Container: Name of your created container
-- Tenant id: Leave it blank
-- Tenant name: Your `project id`, found on OpenStack Horizon on the left side (CURRENT PROJECT))
-- URL: Your URL to access the container
+| Field        | Value                                                              |
+| ------------ | ------------------------------------------------------------------ |
+| Identity URL | Your provider's Keystone identity endpoint URL                     |
+| Username     | Your OpenStack username                                            |
+| Password     | Your OpenStack password                                            |
+| Region       | The region where your container was created                        |
+| Container    | Name of your container                                             |
+| Tenant ID    | Leave blank if not required by your provider                       |
+| Tenant name  | Your project ID (found in OpenStack Horizon under CURRENT PROJECT) |
+| URL          | Your container's public access URL                                 |
 
 ### S3 Compatible
 
-The S3 Compatible API allows to upload images to any server implementing the Amazon S3 standard, also known as "AWS S3 API". The configuration is exactly the same as Amazon S3, but it requires to provide the provider endpoint.
+The S3 Compatible API uploads images to any server implementing the Amazon S3 standard ("AWS S3 API"). Configuration is identical to Amazon S3, with the addition of a custom provider endpoint.
 
-Some providers supporting S3 API are:
+**Hosted providers supporting the S3 API:**
 
 - Backblaze B2 (via S3-compatible API)
 - Cloudflare R2
@@ -181,7 +180,7 @@ Some providers supporting S3 API are:
 - DreamHost DreamObjects
 - Hetzner Object Storage
 - IBM COS S3
-- IDrive® e2
+- IDrive e2
 - Linode Object Storage (now Akamai)
 - OVH Cloud Object Storage
 - PhoenixNAP Object Storage
@@ -191,7 +190,7 @@ Some providers supporting S3 API are:
 - Vultr Object Storage (use region `us-east-1`)
 - Wasabi
 
-Self-hosted S3-compatible solutions:
+**Self-hosted S3-compatible solutions:**
 
 - MinIO
 - Ceph (RGW)
@@ -202,4 +201,4 @@ Self-hosted S3-compatible solutions:
 
 ### SFTP
 
-The SFTP API allows to upload images to a server implementing the [SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol).
+The SFTP API uploads images to any server implementing the [SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol).
