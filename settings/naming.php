@@ -2,7 +2,7 @@
 
 return [
     'README.md' => 'Dashboard Settings',
-    'guest-api.md' => 'Guest API',
+    'api.md' => 'API',
     'ip-bans.md' => 'IP Bans',
-    'login-providers.md' => 'Login providers',
+    'login-providers.md' => 'Login Providers',
 ];

@@ -158,15 +158,16 @@ The Microsoft Azure API allows to upload images to [Microsoft Azure Storage](htt
 
 The [OpenStack API](../settings/upload-storage.md#openstack) allows to upload images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
 
-- OpenStack configuration for RunAbove:
-  - Identity URL: <https://auth.Runabove.io/v2.0>
-  - Username: Your RunAbove username
-  - Password: Your RunAbove password
-  - Region: `SBG-1` or `BHS-1` This is the data center where your container was created
-  - Container: Name of your created container
-  - Tenant id: Leave it blank
-  - Tenant name: Your `project id`, found on OpenStack Horizon on the left side (CURRENT PROJECT))
-  - URL: Your URL to access the container (see [RunAbove CNAME](https://community.runabove.com/kb/en/object-storage/how-to-put-object-storage-behind-your-domain-name.html))
+OpenStack configuration for RunAbove:
+
+- Identity URL: <https://auth.Runabove.io/v2.0>
+- Username: Your RunAbove username
+- Password: Your RunAbove password
+- Region: `SBG-1` or `BHS-1` This is the data center where your container was created
+- Container: Name of your created container
+- Tenant id: Leave it blank
+- Tenant name: Your `project id`, found on OpenStack Horizon on the left side (CURRENT PROJECT))
+- URL: Your URL to access the container
 
 ### S3 Compatible
 
